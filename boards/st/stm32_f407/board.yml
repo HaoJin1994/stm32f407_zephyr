@@ -1,0 +1,6 @@
+board:
+  name: stm32f407
+  full_name: STM32F407 Discovery
+  vendor: st
+  socs:
+    - name: stm32f407xx

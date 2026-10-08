@@ -1,0 +1,161 @@
+/*
+ * Copyright (c) 2017 Linaro Limited
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/dts-v1/;
+#include <st/f4/stm32f407Xg.dtsi>
+#include <st/f4/stm32f407v(e-g)tx-pinctrl.dtsi>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <zephyr/dt-bindings/dma/stm32_dma.h> 
+
+/ {
+    model = "Alientek STM32F407 Explorer Board";
+    compatible = "alientek,stm32f407-explorer", "st,stm32f407";
+
+    chosen {
+        zephyr,console = &usart1;
+        zephyr,shell-uart = &usart1;
+        zephyr,sram = &sram0;
+        zephyr,flash = &flash0;
+        zephyr,ccm = &ccm0;
+        zephyr,code-partition = &slot0_partition;
+    };
+
+    leds {
+        compatible = "gpio-leds";
+        led_0: led_0 {
+            gpios = <&gpiof 9 GPIO_ACTIVE_LOW>;
+            label = "DS0";
+        };
+        led_1: led_1 {
+            gpios = <&gpiof 10 GPIO_ACTIVE_LOW>;
+            label = "DS1";
+        };
+    };
+
+    gpio_keys {
+        compatible = "gpio-keys";
+        user_button: button {
+            label = "Key Up";
+            gpios = <&gpioa 0 GPIO_ACTIVE_HIGH>;
+            zephyr,code = <INPUT_KEY_UP>;
+        };
+        key0: button_0 {
+            label = "key0";
+            gpios = <&gpioe 4 GPIO_ACTIVE_LOW>;
+            zephyr,code = <INPUT_KEY_0>;
+        };
+        key1: button_1 {
+            label = "key1";
+            gpios = <&gpioe 3 GPIO_ACTIVE_LOW>;
+            zephyr,code = <INPUT_KEY_1>;
+        };
+        key2: button_2 {
+            label = "key2";
+            gpios = <&gpioe 2 GPIO_ACTIVE_LOW>;
+            zephyr,code = <INPUT_KEY_2>;
+        };
+    };
+
+    aliases {
+        led0 = &led_0;
+        led1 = &led_1;
+        sw0 = &user_button;
+        sw1 = &key0;
+        sw2 = &key1;
+        sw3 = &key2;
+        uart1 = &usart2;
+    };
+};
+
+&dma1 {
+    status = "okay";
+};
+
+&usart1 {
+    pinctrl-0 = <&usart1_tx_pa9 &usart1_rx_pa10>;
+    pinctrl-names = "default";
+    current-speed = <115200>;
+    status = "okay";
+
+};
+&usart2 {
+    pinctrl-0 = <&usart2_tx_pa2 &usart2_rx_pa3>;
+    pinctrl-names = "default";
+    current-speed = <115200>;
+    status = "okay";
+
+    /*dmas = <&dma1 6 4 (STM32_DMA_PERIPH_TX | STM32_DMA_PRIORITY_HIGH) 0>,
+           <&dma1 5 4 (STM32_DMA_PERIPH_RX | STM32_DMA_PRIORITY_HIGH) 0>;
+    dma-names = "tx", "rx";*/
+};
+
+&clk_lsi {
+    status = "okay";
+};
+
+&clk_hse {
+    clock-frequency = <DT_FREQ_M(8)>;
+    status = "okay";
+};
+
+&pll {
+    div-m = <8>;
+    mul-n = <336>;
+    div-p = <2>;
+    div-q = <7>;
+    clocks = <&clk_hse>;
+    status = "okay";
+};
+
+&rcc {
+    clocks = <&pll>;
+    clock-frequency = <DT_FREQ_M(168)>;
+    ahb-prescaler = <1>;
+    apb1-prescaler = <4>;
+    apb2-prescaler = <2>;
+};
+
+
+&rtc {
+    clocks = <&rcc STM32_CLOCK_BUS_APB1 0x10000000>,
+         <&rcc STM32_SRC_LSI RTC_SEL(2)>;
+    status = "okay";
+
+    backup_regs {
+        status = "okay";
+    };
+};
+
+zephyr_udc0: &usbotg_fs {
+    pinctrl-0 = <&usb_otg_fs_dm_pa11 &usb_otg_fs_dp_pa12>;
+    pinctrl-names = "default";
+    status = "okay";
+};
+&flash0 {
+    partitions {
+        compatible = "fixed-partitions";
+        #address-cells = <1>;
+        #size-cells = <1>;
+
+        boot_partition: partition@0 {
+            label = "mcuboot";
+            reg = <0x00000000 0x00010000>;  // 64KB 给 MCUboot
+        };
+
+        slot0_partition: partition@10000 {
+            label = "image-0";
+            reg = <0x00010000 0x00070000>;  // 448KB 主程序
+        };
+
+        slot1_partition: partition@80000 {
+            label = "storage";
+            reg = <0x00080000 0x00070000>;  // 448KB 备份槽
+        };
+    };
+};
+
+
+        
