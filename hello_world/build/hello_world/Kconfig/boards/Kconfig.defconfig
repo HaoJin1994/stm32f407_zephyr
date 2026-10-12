@@ -1,0 +1,2 @@
+# Load Zephyr board defconfig descriptions.
+osource "/home/ubuntu/work/stm32f407_zephyr/boards/st/stm32_f407/Kconfig.defconfig"

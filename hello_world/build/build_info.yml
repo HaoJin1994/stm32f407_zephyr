@@ -1,59 +1,28 @@
 cmake:
   application:
-    configuration-dir: '/home/ubuntu/work/stm32f407_zephyr/hello_world'
-    source-dir: '/home/ubuntu/work/stm32f407_zephyr/hello_world'
+    source-dir: '/home/ubuntu/work/zephyr/zephyr/share/sysbuild'
   board:
     name: 'stm32f407'
     path:
      - '/home/ubuntu/work/stm32f407_zephyr/boards/st/stm32_f407'
     qualifiers: 'stm32f407xx'
     revision: ''
-  devicetree:
-    bindings-dirs:
-     - '/home/ubuntu/work/zephyr/zephyr/dts/bindings'
-    files:
-     - '/home/ubuntu/work/stm32f407_zephyr/boards/st/stm32_f407/stm32f407.dts'
-    include-dirs:
-     - '/home/ubuntu/work/zephyr/modules/hal/ambiq/dts'
-     - '/home/ubuntu/work/zephyr/modules/hal/atmel/include'
-     - '/home/ubuntu/work/zephyr/modules/hal/bouffalolab/include'
-     - '/home/ubuntu/work/zephyr/modules/hal/bouffalolab/include/zephyr'
-     - '/home/ubuntu/work/zephyr/modules/hal/gigadevice/include'
-     - '/home/ubuntu/work/zephyr/modules/hal/infineon/dts'
-     - '/home/ubuntu/work/zephyr/modules/hal/microchip/include'
-     - '/home/ubuntu/work/zephyr/modules/hal/microchip/dts'
-     - '/home/ubuntu/work/zephyr/modules/hal/nuvoton/dts'
-     - '/home/ubuntu/work/zephyr/modules/hal/nxp/dts'
-     - '/home/ubuntu/work/zephyr/modules/hal/stm32/dts'
-     - '/home/ubuntu/work/stm32f407_zephyr/hello_world/include'
-     - '/home/ubuntu/work/zephyr/zephyr/include'
-     - '/home/ubuntu/work/zephyr/zephyr/include/zephyr'
-     - '/home/ubuntu/work/zephyr/zephyr/dts/common'
-     - '/home/ubuntu/work/zephyr/zephyr/dts/vendor'
-     - '/home/ubuntu/work/zephyr/zephyr/dts/rx'
-     - '/home/ubuntu/work/zephyr/zephyr/dts/x86'
-     - '/home/ubuntu/work/zephyr/zephyr/dts/xtensa'
-     - '/home/ubuntu/work/zephyr/zephyr/dts/sparc'
-     - '/home/ubuntu/work/zephyr/zephyr/dts/riscv'
-     - '/home/ubuntu/work/zephyr/zephyr/dts/posix'
-     - '/home/ubuntu/work/zephyr/zephyr/dts/arm64'
-     - '/home/ubuntu/work/zephyr/zephyr/dts/arm'
-     - '/home/ubuntu/work/zephyr/zephyr/dts/arc'
-     - '/home/ubuntu/work/zephyr/zephyr/dts'
+  images:
+   - name: 'hello_world'
+     source-dir: '/home/ubuntu/work/stm32f407_zephyr/hello_world'
+     type: 'MAIN'
+   - name: 'mcuboot'
+     source-dir: '/home/ubuntu/work/zephyr/bootloader/mcuboot/boot/zephyr'
+     type: 'BOOTLOADER'
   kconfig:
     files:
-     - '/home/ubuntu/work/stm32f407_zephyr/boards/st/stm32_f407/stm32f407_defconfig'
-     - '/home/ubuntu/work/stm32f407_zephyr/hello_world/prj.conf'
+     - '/home/ubuntu/work/stm32f407_zephyr/hello_world/build/_sysbuild/empty.conf'
+     - '/home/ubuntu/work/stm32f407_zephyr/hello_world/sysbuild.conf'
     user-files:
-     - '/home/ubuntu/work/stm32f407_zephyr/hello_world/prj.conf'
-  toolchain:
-    name: 'zephyr'
-    path: '/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1'
-  zephyr:
-    version: '4.4.99'
-    zephyr-base: '/home/ubuntu/work/zephyr/zephyr'
+     - '/home/ubuntu/work/stm32f407_zephyr/hello_world/sysbuild.conf'
+  sysbuild: 'true'
 version: '0.1.0'
 west:
-  command: '/home/ubuntu/work/zephyr/zephyr/.venv/bin/west build -b stm32f407 -p always -- -DBOARD_ROOT=/home/ubuntu/work/stm32f407_zephyr'
+  command: '/home/ubuntu/work/zephyr/zephyr/.venv/bin/west build -b stm32f407 --sysbuild -p always -- -DBOARD_ROOT=/home/ubuntu/work/stm32f407_zephyr'
   topdir: '/home/ubuntu/work/zephyr'
   version: '1.5.0'
