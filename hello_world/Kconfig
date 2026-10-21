@@ -1,44 +1,9 @@
 # 应用根目录的 Kconfig
 mainmenu "My Application Configuration"
 
-config MY_APP
-    bool "My Application"
-    default y
-    help
-      Enable my application.
-
-if MY_APP
-
-config MY_APP_THREAD_PRIORITY
-    int "Application thread priority"
-    default 5
-    range 0 15
-    help
-      Priority of the main application thread.
-
-config MY_APP_STACK_SIZE
-    int "Application stack size"
-    default 2048
-    help
-      Stack size for the application thread.
-
-menu "Sensor Configuration"
-
-config MY_APP_SENSOR_ENABLE
-    bool "Enable sensor support"
-    default y
-
-if MY_APP_SENSOR_ENABLE
-
-config MY_APP_SENSOR_POLL_INTERVAL
-    int "Sensor polling interval (ms)"
-    default 1000
-    range 100 10000
-
-endif # MY_APP_SENSOR_ENABLE
-
-endmenu
-
-endif # MY_APP
+rsource "modules/led/Kconfig"
+rsource "modules/cdc_acm/Kconfig"
+rsource "modules/pwm/Kconfig"
+rsource "modules/spi_flash/Kconfig"
 
 source "Kconfig.zephyr"

@@ -30,7 +30,9 @@ empty_file.o: /home/ubuntu/work/zephyr/zephyr/misc/empty_file.c \
  /home/ubuntu/work/zephyr/zephyr/include/zephyr/dt-bindings/power/stm32_pwr.h \
  /home/ubuntu/work/zephyr/zephyr/dts/common/freq.h \
  /home/ubuntu/work/zephyr/zephyr/dts/common/mem.h \
- /home/ubuntu/work/zephyr/modules/hal/stm32/dts/st/f4/stm32f407v(e-g)tx-pinctrl.dtsi \
+ /home/ubuntu/work/zephyr/modules/hal/stm32/dts/st/f4/stm32f407z(e-g)tx-pinctrl.dtsi \
  /home/ubuntu/work/zephyr/zephyr/include/zephyr/dt-bindings/pinctrl/stm32-pinctrl.h \
  /home/ubuntu/work/zephyr/zephyr/include/zephyr/dt-bindings/pinctrl/stm32-pinctrl-common.h \
- /home/ubuntu/work/zephyr/zephyr/include/zephyr/dt-bindings/input/input-event-codes.h
+ /home/ubuntu/work/zephyr/zephyr/include/zephyr/dt-bindings/input/input-event-codes.h \
+ modules/led/led.overlay modules/cdc_acm/cdc_acm.overlay \
+ modules/pwm/pwm.overlay modules/spi_flash/spi_flash.overlay

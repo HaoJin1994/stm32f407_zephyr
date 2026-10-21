@@ -561,7 +561,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=109
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=110
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -638,7 +638,7 @@ _Python3_INTERPRETER_SIGNATURE:INTERNAL=9eee7cb751a176394150e05049543d76
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=
 //Estimated MCUboot image trailer size
-mcuboot_image_footer_size:INTERNAL=582
+mcuboot_image_footer_size:INTERNAL=262294
 //Estimated MCUboot update image trailer size
-mcuboot_image_upgrade_footer_size:INTERNAL=432
+mcuboot_image_upgrade_footer_size:INTERNAL=262144
 

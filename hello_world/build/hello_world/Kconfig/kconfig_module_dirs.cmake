@@ -22,3 +22,4 @@ list(APPEND kconfig_env_dirs ZEPHYR_OPENISA_MODULE_DIR=/home/ubuntu/work/zephyr/
 list(APPEND kconfig_env_dirs ZEPHYR_HAL_STM32_MODULE_DIR=/home/ubuntu/work/zephyr/modules/hal/stm32)
 list(APPEND kconfig_env_dirs ZEPHYR_LITTLEFS_MODULE_DIR=/home/ubuntu/work/zephyr/modules/fs/littlefs)
 list(APPEND kconfig_env_dirs ZEPHYR_MCUBOOT_MODULE_DIR=/home/ubuntu/work/zephyr/bootloader/mcuboot)
+list(APPEND kconfig_env_dirs ZEPHYR_ZCBOR_MODULE_DIR=/home/ubuntu/work/zephyr/modules/lib/zcbor)

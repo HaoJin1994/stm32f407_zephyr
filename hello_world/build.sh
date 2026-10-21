@@ -1,3 +1,37 @@
-#! /bin/bash
+#!/bin/bash
 
-west build -b stm32f407 -p always -- -DBOARD_ROOT=/home/ubuntu/work/stm32f407_zephyr 
+# 读取模块配置
+
+OVERLAYS=""
+CONFIGS="prj.conf"
+
+# mcuboot 模块
+#CONFIGS="${CONFIGS};modules/mcuboot/mcuboot.conf"
+
+# led  模块
+OVERLAYS="${OVERLAYS};modules/led/led.overlay"
+CONFIGS="${CONFIGS};modules/led/led.conf"
+
+# cdc_acm 模块
+OVERLAYS="${OVERLAYS};modules/cdc_acm/cdc_acm.overlay"
+CONFIGS="${CONFIGS};modules/cdc_acm/cdc_acm.conf"
+
+# pwm led模块
+OVERLAYS="${OVERLAYS};modules/pwm/pwm.overlay"
+CONFIGS="${CONFIGS};modules/pwm/pwm.conf"
+
+#spi_flash 模块
+OVERLAYS="${OVERLAYS};modules/spi_flash/spi_flash.overlay"
+CONFIGS="${CONFIGS};modules/spi_flash/spi_flash.conf" 
+
+OVERLAYS=${OVERLAYS#;}
+
+echo "=== Build Configuration ==="
+echo "Overlays: ${OVERLAYS}"
+echo "Configs: ${CONFIGS}"
+echo "=========================="
+
+west build -b stm32f407 --sysbuild -p always -- \
+  -DBOARD_ROOT=/home/ubuntu/work/stm32f407_zephyr \
+  -DDTC_OVERLAY_FILE="${OVERLAYS}" \
+  -DCONF_FILE="${CONFIGS}"

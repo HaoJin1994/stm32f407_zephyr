@@ -20,6 +20,7 @@ events:
     names:
       - "uname"
     candidate_directories:
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -32,7 +33,9 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     searched_directories:
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/uname"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/uname"
       - "/snap/bin/uname"
       - "/home/ubuntu/.local/bin/uname"
@@ -43,9 +46,8 @@ events:
     found: "/usr/bin/uname"
     search_context:
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -59,6 +61,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -87,6 +90,7 @@ events:
       - "ninja"
       - "samu"
     candidate_directories:
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -99,7 +103,11 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     searched_directories:
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/ninja-build"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/ninja"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/samu"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/ninja-build"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/ninja"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/samu"
@@ -119,9 +127,8 @@ events:
     found: "/usr/local/bin/ninja"
     search_context:
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -135,4 +142,5 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
 ...

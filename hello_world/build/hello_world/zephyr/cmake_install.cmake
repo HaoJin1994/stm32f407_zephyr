@@ -184,6 +184,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/ubuntu/work/stm32f407_zephyr/hello_world/build/hello_world/modules/zcbor/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/ubuntu/work/stm32f407_zephyr/hello_world/build/hello_world/zephyr/kernel/cmake_install.cmake")
 endif()
 

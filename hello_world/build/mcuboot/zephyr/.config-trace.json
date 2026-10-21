@@ -313,11 +313,22 @@
     "CONFIG_BOOT_MAX_IMG_SECTORS_AUTO",
     "y",
     "bool",
-    "y",
-    "default",
+    "n",
+    "assign",
     [
-      "/home/ubuntu/work/zephyr/bootloader/mcuboot/boot/zephyr/Kconfig",
-      890
+      "/home/ubuntu/work/stm32f407_zephyr/hello_world/sysbuild/mcuboot.conf",
+      1
+    ]
+  ],
+  [
+    "CONFIG_BOOT_MAX_IMG_SECTORS",
+    "y",
+    "int",
+    "8",
+    "assign",
+    [
+      "/home/ubuntu/work/stm32f407_zephyr/hello_world/sysbuild/mcuboot.conf",
+      2
     ]
   ],
   [
@@ -647,11 +658,30 @@
     "CONFIG_MCUBOOT_LOGICAL_SECTOR_SIZE",
     "y",
     "hex",
-    "0x0",
+    "0x20000",
+    "assign",
+    [
+      "/home/ubuntu/work/stm32f407_zephyr/hello_world/sysbuild/mcuboot.conf",
+      3
+    ]
+  ],
+  [
+    "CONFIG_MCUBOOT_VERIFY_LOGICAL_SECTORS",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MCUBOOT_LOGICAL_SECTOR_SIZE_EXPERIMENTAL",
+    "n",
+    "bool",
+    "y",
     "default",
     [
       "/home/ubuntu/work/zephyr/bootloader/mcuboot/boot/zephyr/Kconfig",
-      1506
+      1521
     ]
   ],
   [
@@ -721,6 +751,17 @@
     ]
   ],
   [
+    "CONFIG_DT_HAS_ETHERNET_PHY_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/Kconfig/Kconfig.dts",
+      3423
+    ]
+  ],
+  [
     "CONFIG_DT_HAS_FIXED_CLOCK_ENABLED",
     "n",
     "bool",
@@ -787,6 +828,28 @@
     ]
   ],
   [
+    "CONFIG_DT_HAS_SNPS_DWMAC_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/Kconfig/Kconfig.dts",
+      14228
+    ]
+  ],
+  [
+    "CONFIG_DT_HAS_SNPS_DWMAC_MDIO_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/Kconfig/Kconfig.dts",
+      14233
+    ]
+  ],
+  [
     "CONFIG_DT_HAS_SNPS_DWMAC_PTP_CLOCK_ENABLED",
     "n",
     "bool",
@@ -839,6 +902,17 @@
     [
       "/home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/Kconfig/Kconfig.dts",
       14833
+    ]
+  ],
+  [
+    "CONFIG_DT_HAS_ST_STM32_ETHERNET_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/Kconfig/Kconfig.dts",
+      14868
     ]
   ],
   [
@@ -905,17 +979,6 @@
     [
       "/home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/Kconfig/Kconfig.dts",
       15018
-    ]
-  ],
-  [
-    "CONFIG_DT_HAS_ST_STM32_OTGFS_ENABLED",
-    "n",
-    "bool",
-    "y",
-    "default",
-    [
-      "/home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/Kconfig/Kconfig.dts",
-      15048
     ]
   ],
   [
@@ -993,6 +1056,17 @@
     [
       "/home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/Kconfig/Kconfig.dts",
       15188
+    ]
+  ],
+  [
+    "CONFIG_DT_HAS_ST_STM32_WATCHDOG_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/Kconfig/Kconfig.dts",
+      15228
     ]
   ],
   [
@@ -1211,7 +1285,7 @@
     "CONFIG_NUM_IRQS",
     "n",
     "int",
-    "68",
+    "62",
     "default",
     [
       "/home/ubuntu/work/zephyr/zephyr/soc/st/stm32/Kconfig.defconfig",
@@ -2400,6 +2474,25 @@
       "/home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/Kconfig/Kconfig.modules",
       135
     ]
+  ],
+  [
+    "CONFIG_ZEPHYR_ZCBOR_MODULE",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/Kconfig/Kconfig.modules",
+      140
+    ]
+  ],
+  [
+    "CONFIG_ZCBOR",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
   ],
   [
     "CONFIG_LVGL",
@@ -5038,9 +5131,10 @@
     "y",
     "bool",
     "y",
-    "select",
+    "default",
     [
-      "MCUBOOT_DEVICE_SETTINGS && FLASH_HAS_PAGE_LAYOUT && (MCUBOOT_LOGICAL_SECTOR_SIZE = 0x0 || MCUBOOT_VERIFY_LOGICAL_SECTORS)"
+      "/home/ubuntu/work/zephyr/zephyr/drivers/flash/Kconfig",
+      171
     ]
   ],
   [
@@ -8792,6 +8886,16 @@
     [
       "/home/ubuntu/work/zephyr/zephyr/Kconfig.zephyr",
       1057
+    ]
+  ],
+  [
+    "CONFIG_EXPERIMENTAL",
+    "n",
+    "bool",
+    "y",
+    "select",
+    [
+      "MCUBOOT_LOGICAL_SECTOR_SIZE_EXPERIMENTAL"
     ]
   ],
   [

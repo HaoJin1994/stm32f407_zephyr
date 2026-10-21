@@ -23,6 +23,6 @@ cmake:
   sysbuild: 'true'
 version: '0.1.0'
 west:
-  command: '/home/ubuntu/work/zephyr/zephyr/.venv/bin/west build -b stm32f407 --sysbuild -p always -- -DBOARD_ROOT=/home/ubuntu/work/stm32f407_zephyr'
+  command: '/home/ubuntu/work/zephyr/zephyr/.venv/bin/west build -b stm32f407 --sysbuild -p always -- -DBOARD_ROOT=/home/ubuntu/work/stm32f407_zephyr -DDTC_OVERLAY_FILE=modules/led/led.overlay;modules/cdc_acm/cdc_acm.overlay;modules/pwm/pwm.overlay;modules/spi_flash/spi_flash.overlay -DCONF_FILE=prj.conf;modules/led/led.conf;modules/cdc_acm/cdc_acm.conf;modules/pwm/pwm.conf;modules/spi_flash/spi_flash.conf'
   topdir: '/home/ubuntu/work/zephyr'
   version: '1.5.0'

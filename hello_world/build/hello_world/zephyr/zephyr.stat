@@ -8,63 +8,66 @@ ELF Header:
   Type:                              EXEC (Executable file)
   Machine:                           ARM
   Version:                           0x1
-  Entry point address:               0x8025bed
+  Entry point address:               0x8027525
   Start of program headers:          52 (bytes into file)
-  Start of section headers:          2288600 (bytes into file)
+  Start of section headers:          3818672 (bytes into file)
   Flags:                             0x5000200, Version5 EABI, soft-float ABI
   Size of this header:               52 (bytes)
   Size of program headers:           32 (bytes)
   Number of program headers:         7
   Size of section headers:           40 (bytes)
-  Number of section headers:         44
-  Section header string table index: 43
+  Number of section headers:         47
+  Section header string table index: 46
 
 Section Headers:
   [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
   [ 0]                   NULL            00000000 000000 000000 00      0   0  0
   [ 1] rom_start         PROGBITS        08020000 000118 000550 00  AX  0   0  4
-  [ 2] text              PROGBITS        08020550 000668 0122c0 00  AX  0   0  8
-  [ 3] .ARM.exidx        ARM_EXIDX       08032810 012928 000008 00  AL  2   0  4
-  [ 4] initlevel         PROGBITS        08032818 012930 0000c8 00   A  0   0  4
-  [ 5] device_area       PROGBITS        080328e0 0129f8 0001e0 00   A  0   0  4
-  [ 6] sw_isr_table      PROGBITS        08032ac0 012bd8 000220 00   A  0   0  4
-  [ 7] k_kernel_ini[...] PROGBITS        08032ce0 012df8 000004 00   A  0   0  4
-  [ 8] device_api_area   PROGBITS        08032ce4 012dfc 0000b4 00   A  0   0  4
-  [ 9] log_const_area    PROGBITS        08032d98 012eb0 0000c0 00   A  0   0  4
-  [10] log_backend_area  PROGBITS        08032e58 012f70 000020 00   A  0   0  4
-  [11] shell_area        PROGBITS        08032e78 012f90 000030 00   A  0   0  4
-  [12] shell_root_c[...] PROGBITS        08032ea8 012fc0 00003c 00   A  0   0  4
-  [13] shell_subcmd[...] PROGBITS        08032ee4 012ffc 000104 00   A  0   0  4
-  [14] shell_dynami[...] PROGBITS        08032fe8 013100 000014 00   A  0   0  4
-  [15] tbss              NOBITS          08032ffc 013114 000008 00 WAT  0   0  4
-  [16] rodata            PROGBITS        08033000 013118 003a94 00   A  0   0  8
-  [17] .ramfunc          PROGBITS        20000000 016e58 000000 00   W  0   0  1
-  [18] datas             PROGBITS        20000000 016bb0 000164 00  WA  0   0  8
-  [19] device_states     PROGBITS        20000164 016d14 000020 00  WA  0   0  1
-  [20] log_mpsc_pbu[...] PROGBITS        20000184 016d34 000038 00  WA  0   0  4
-  [21] log_msg_ptr_area  PROGBITS        200001bc 016d6c 000004 00  WA  0   0  4
-  [22] log_dynamic_area  PROGBITS        200001c0 016d70 000060 00  WA  0   0  4
-  [23] k_mem_slab_area   PROGBITS        20000220 016dd0 000038 00  WA  0   0  4
-  [24] k_heap_area       PROGBITS        20000258 016e08 000028 00  WA  0   0  4
-  [25] k_mutex_area      PROGBITS        20000280 016e30 000014 00  WA  0   0  4
-  [26] k_sem_area        PROGBITS        20000294 016e44 000010 00  WA  0   0  4
-  [27] .comment          PROGBITS        00000000 016e58 00001f 01  MS  0   0  1
-  [28] .debug_aranges    PROGBITS        00000000 016e78 002a98 00      0   0  8
-  [29] .debug_info       PROGBITS        00000000 019910 13367e 00      0   0  1
-  [30] .debug_abbrev     PROGBITS        00000000 14cf8e 01d1d8 00      0   0  1
-  [31] .debug_line       PROGBITS        00000000 16a166 053048 00      0   0  1
-  [32] .debug_frame      PROGBITS        00000000 1bd1b0 0071d4 00      0   0  4
-  [33] .debug_str        PROGBITS        00000000 1c4384 01250d 01  MS  0   0  1
-  [34] .debug_line_str   PROGBITS        00000000 1d6891 0000e5 01  MS  0   0  1
-  [35] .debug_loclists   PROGBITS        00000000 1d6976 033f04 00      0   0  1
-  [36] .debug_rnglists   PROGBITS        00000000 20a87a 00776a 00      0   0  1
-  [37] .ARM.attributes   ARM_ATTRIBUTES  00000000 211fe4 000032 00      0   0  1
-  [38] .last_section     PROGBITS        08036d38 016e54 000004 00  WA  0   0  4
-  [39] bss               NOBITS          200002a8 016e68 001652 00  WA  0   0  8
-  [40] noinit            NOBITS          20001900 016e68 003760 00  WA  0   0 64
-  [41] .symtab           SYMTAB          00000000 212018 0100d0 10     42 2564  4
-  [42] .strtab           STRTAB          00000000 2220e8 00c8bd 00      0   0  1
-  [43] .shstrtab         STRTAB          00000000 22e9a5 000230 00      0   0  1
+  [ 2] text              PROGBITS        08020550 000668 018660 00  AX  0   0  8
+  [ 3] .ARM.exidx        ARM_EXIDX       08038bb0 018cc8 000008 00  AL  2   0  4
+  [ 4] initlevel         PROGBITS        08038bb8 018cd0 000120 00   A  0   0  4
+  [ 5] device_area       PROGBITS        08038cd8 018df0 0002a0 00   A  0   0  4
+  [ 6] sw_isr_table      PROGBITS        08038f78 019090 000220 00   A  0   0  4
+  [ 7] k_kernel_ini[...] PROGBITS        08039198 0192b0 000004 00   A  0   0  4
+  [ 8] k_kernel_ini[...] PROGBITS        0803919c 0192b4 000004 00   A  0   0  4
+  [ 9] device_api_area   PROGBITS        080391a0 0192b8 000170 00   A  0   0  4
+  [10] log_const_area    PROGBITS        08039310 019428 000150 00   A  0   0  4
+  [11] log_backend_area  PROGBITS        08039460 019578 000020 00   A  0   0  4
+  [12] shell_area        PROGBITS        08039480 019598 000030 00   A  0   0  4
+  [13] shell_root_c[...] PROGBITS        080394b0 0195c8 000044 00   A  0   0  4
+  [14] shell_subcmd[...] PROGBITS        080394f4 01960c 000104 00   A  0   0  4
+  [15] shell_dynami[...] PROGBITS        080395f8 019710 000014 00   A  0   0  4
+  [16] tbss              NOBITS          0803960c 019724 000008 00 WAT  0   0  4
+  [17] rodata            PROGBITS        08039610 019728 004f40 00   A  0   0  8
+  [18] .ramfunc          PROGBITS        20000000 01ee68 000000 00   W  0   0  1
+  [19] datas             PROGBITS        20000000 01e668 000550 00  WA  0   0  8
+  [20] device_states     PROGBITS        20000550 01ebb8 00002c 00  WA  0   0  1
+  [21] log_mpsc_pbu[...] PROGBITS        2000057c 01ebe4 000044 00  WA  0   0  4
+  [22] log_msg_ptr_area  PROGBITS        200005c0 01ec28 000004 00  WA  0   0  4
+  [23] log_dynamic_area  PROGBITS        200005c4 01ec2c 0000a8 00  WA  0   0  4
+  [24] k_mem_slab_area   PROGBITS        2000066c 01ecd4 000040 00  WA  0   0  4
+  [25] k_heap_area       PROGBITS        200006ac 01ed14 000048 00  WA  0   0  4
+  [26] k_mutex_area      PROGBITS        200006f4 01ed5c 000028 00  WA  0   0  4
+  [27] k_sem_area        PROGBITS        2000071c 01ed84 000018 00  WA  0   0  4
+  [28] usb_descriptor    PROGBITS        20000734 01ed9c 0000a3 00  WA  0   0  1
+  [29] usb_cfg_data_area PROGBITS        200007d8 01ee40 000024 00  WA  0   0  4
+  [30] .comment          PROGBITS        00000000 01ee68 00001f 01  MS  0   0  1
+  [31] .debug_aranges    PROGBITS        00000000 01ee88 003c78 00      0   0  8
+  [32] .debug_info       PROGBITS        00000000 022b00 23f507 00      0   0  1
+  [33] .debug_abbrev     PROGBITS        00000000 262007 0271d6 00      0   0  1
+  [34] .debug_line       PROGBITS        00000000 2891dd 07857a 00      0   0  1
+  [35] .debug_frame      PROGBITS        00000000 301758 00a488 00      0   0  4
+  [36] .debug_str        PROGBITS        00000000 30bbe0 019ae2 01  MS  0   0  1
+  [37] .debug_line_str   PROGBITS        00000000 3256c2 0000e5 01  MS  0   0  1
+  [38] .debug_loclists   PROGBITS        00000000 3257a7 04f46f 00      0   0  1
+  [39] .debug_rnglists   PROGBITS        00000000 374c16 00af84 00      0   0  1
+  [40] .ARM.attributes   ARM_ATTRIBUTES  00000000 37fb9a 000032 00      0   0  1
+  [41] .last_section     PROGBITS        0803ed4c 01ee64 000004 00  WA  0   0  4
+  [42] bss               NOBITS          20000800 01ee80 00282a 00  WA  0   0  8
+  [43] noinit            NOBITS          20003040 01ee80 0049dc 00  WA  0   0 64
+  [44] .symtab           SYMTAB          00000000 37fbcc 014940 10     45 3358  4
+  [45] .strtab           STRTAB          00000000 39450c 00fd34 00      0   0  1
+  [46] .shstrtab         STRTAB          00000000 3a4240 00026f 00      0   0  1
 Key to Flags:
   W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
   L (link order), O (extra OS processing required), G (group), T (TLS),
@@ -73,19 +76,19 @@ Key to Flags:
 
 Program Headers:
   Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
-  ARM_EXIDX      0x012928 0x08032810 0x08032810 0x00008 0x00008 R   0x4
-  LOAD           0x000118 0x08020000 0x08020000 0x16a94 0x16a94 RWE 0x8
-  LOAD           0x016bb0 0x20000000 0x08036a94 0x002a4 0x002a4 RW  0x8
-  LOAD           0x016e54 0x08036d38 0x08036d38 0x00004 0x00004 RW  0x4
-  LOAD           0x000000 0x200002a8 0x200002a8 0x00000 0x04db8 RW  0x40
-  TLS            0x013114 0x08032ffc 0x08032ffc 0x00000 0x00008 R   0x4
+  ARM_EXIDX      0x018cc8 0x08038bb0 0x08038bb0 0x00008 0x00008 R   0x4
+  LOAD           0x000118 0x08020000 0x08020000 0x1e550 0x1e550 RWE 0x8
+  LOAD           0x01e668 0x20000000 0x0803e550 0x007fc 0x007fc RW  0x8
+  LOAD           0x01ee64 0x0803ed4c 0x0803ed4c 0x00004 0x00004 RW  0x4
+  LOAD           0x000000 0x20000800 0x20000800 0x00000 0x0721c RW  0x40
+  TLS            0x019724 0x0803960c 0x0803960c 0x00000 0x00008 R   0x4
   GNU_STACK      0x000000 0x00000000 0x00000000 0x00000 0x00000 RW  0x10
 
  Section to Segment mapping:
   Segment Sections...
    00     .ARM.exidx 
-   01     rom_start text .ARM.exidx initlevel device_area sw_isr_table k_kernel_init_pre_entry_area device_api_area log_const_area log_backend_area shell_area shell_root_cmds_area shell_subcmds_area shell_dynamic_subcmds_area rodata 
-   02     datas device_states log_mpsc_pbuf_area log_msg_ptr_area log_dynamic_area k_mem_slab_area k_heap_area k_mutex_area k_sem_area 
+   01     rom_start text .ARM.exidx initlevel device_area sw_isr_table k_kernel_init_pre_entry_area k_kernel_init_post_entry_area device_api_area log_const_area log_backend_area shell_area shell_root_cmds_area shell_subcmds_area shell_dynamic_subcmds_area rodata 
+   02     datas device_states log_mpsc_pbuf_area log_msg_ptr_area log_dynamic_area k_mem_slab_area k_heap_area k_mutex_area k_sem_area usb_descriptor usb_cfg_data_area 
    03     .last_section 
    04     bss noinit 
    05     tbss 

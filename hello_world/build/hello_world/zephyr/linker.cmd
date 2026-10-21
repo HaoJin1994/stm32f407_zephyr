@@ -2,7 +2,7 @@
 _region_min_align = 32;
 MEMORY
     {
-    FLASH (rx) : ORIGIN = (0x8000000 + 0x20000), LENGTH = (0x60000 - 0x246)
+    FLASH (rx) : ORIGIN = (0x8000000 + 0x20000), LENGTH = (0x60000 - 0x40096)
     RAM (wx) : ORIGIN = (536870912), LENGTH = (131072)
     SRAM0 ( rw ) : ORIGIN = (536870912), LENGTH = (131072) DTCM ( rw ) : ORIGIN = (268435456), LENGTH = (65536)
     IDT_LIST (wx) : ORIGIN = 0xFFFF7FFF, LENGTH = 32K
@@ -120,8 +120,14 @@ device_api_area : SUBALIGN(4)
  _flash_driver_api_ext_end = .;
  _gpio_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._gpio_driver_api.static.*))); _gpio_driver_api_list_end = .;;
  _gpio_driver_api_ext_end = .;
+ _led_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._led_driver_api.static.*))); _led_driver_api_list_end = .;;
+ _led_driver_api_ext_end = .;
+ _pwm_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._pwm_driver_api.static.*))); _pwm_driver_api_list_end = .;;
+ _pwm_driver_api_ext_end = .;
  _reset_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._reset_driver_api.static.*))); _reset_driver_api_list_end = .;;
  _reset_driver_api_ext_end = .;
+ _spi_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._spi_driver_api.static.*))); _spi_driver_api_list_end = .;;
+ _spi_driver_api_ext_end = .;
  _shared_irq_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._shared_irq_driver_api.static.*))); _shared_irq_driver_api_list_end = .;;
  _shared_irq_driver_api_ext_end = .;
  _audio_codec_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._audio_codec_driver_api.static.*))); _audio_codec_driver_api_list_end = .;;
@@ -210,8 +216,6 @@ device_api_area : SUBALIGN(4)
  _i2s_driver_api_ext_end = .;
  _ipm_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._ipm_driver_api.static.*))); _ipm_driver_api_list_end = .;;
  _ipm_driver_api_ext_end = .;
- _led_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._led_driver_api.static.*))); _led_driver_api_list_end = .;;
- _led_driver_api_ext_end = .;
  _led_strip_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._led_strip_driver_api.static.*))); _led_strip_driver_api_list_end = .;;
  _led_strip_driver_api_ext_end = .;
  _lora_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._lora_driver_api.static.*))); _lora_driver_api_list_end = .;;
@@ -244,8 +248,6 @@ device_api_area : SUBALIGN(4)
  _ptp_clock_driver_api_ext_end = .;
  _pulse_io_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._pulse_io_driver_api.static.*))); _pulse_io_driver_api_list_end = .;;
  _pulse_io_driver_api_ext_end = .;
- _pwm_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._pwm_driver_api.static.*))); _pwm_driver_api_list_end = .;;
- _pwm_driver_api_ext_end = .;
  _regulator_parent_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._regulator_parent_driver_api.static.*))); _regulator_parent_driver_api_list_end = .;;
  _regulator_parent_driver_api_ext_end = .;
  _regulator_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._regulator_driver_api.static.*))); _regulator_driver_api_list_end = .;;
@@ -260,8 +262,6 @@ device_api_area : SUBALIGN(4)
  _sensor_driver_api_ext_end = .;
  _smbus_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._smbus_driver_api.static.*))); _smbus_driver_api_list_end = .;;
  _smbus_driver_api_ext_end = .;
- _spi_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._spi_driver_api.static.*))); _spi_driver_api_list_end = .;;
- _spi_driver_api_ext_end = .;
  _syscon_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._syscon_driver_api.static.*))); _syscon_driver_api_list_end = .;;
  _syscon_driver_api_ext_end = .;
  _tee_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._tee_driver_api.static.*))); _tee_driver_api_list_end = .;;
@@ -468,6 +468,14 @@ __ramfunc_load_start = LOADADDR(.ramfunc);
  k_condvar_area : ALIGN_WITH_INPUT { _k_condvar_list_start = .; *(SORT_BY_NAME(._k_condvar.static.*)); _k_condvar_list_end = .;; } > RAM AT > FLASH
  sys_mem_blocks_ptr_area : ALIGN_WITH_INPUT { _sys_mem_blocks_ptr_list_start = .; *(SORT_BY_NAME(._sys_mem_blocks_ptr.static.*)); _sys_mem_blocks_ptr_list_end = .;; } > RAM AT > FLASH
  net_buf_pool_area : ALIGN_WITH_INPUT { _net_buf_pool_list_start = .; KEEP(*(SORT_BY_NAME(._net_buf_pool.static.*))); _net_buf_pool_list_end = .;; } > RAM AT > FLASH
+ usb_descriptor : ALIGN_WITH_INPUT
+ {
+  __usb_descriptor_start = .;
+  *(".usb.descriptor")
+  KEEP(*(SORT_BY_NAME(".usb.descriptor*")))
+  __usb_descriptor_end = .;
+ } > RAM AT > FLASH
+ usb_cfg_data_area : ALIGN_WITH_INPUT { _usb_cfg_data_list_start = .; KEEP(*(SORT_BY_NAME(._usb_cfg_data.static.*))); _usb_cfg_data_list_end = .;; } > RAM AT > FLASH
     __data_region_end = .;
 /DISCARD/ :
 {

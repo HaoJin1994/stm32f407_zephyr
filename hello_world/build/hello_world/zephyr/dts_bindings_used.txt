@@ -33,9 +33,15 @@
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/spi/st,stm32-spi.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/spi/spi-controller.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/spi/st,stm32-spi-common.yaml
+/home/ubuntu/work/zephyr/zephyr/dts/bindings/mtd/jedec,spi-nor.yaml
+/home/ubuntu/work/zephyr/zephyr/dts/bindings/base/power.yaml
+/home/ubuntu/work/zephyr/zephyr/dts/bindings/mtd/jedec,jesd216.yaml
+/home/ubuntu/work/zephyr/zephyr/dts/bindings/mtd/jedec,spi-nor-common.yaml
+/home/ubuntu/work/zephyr/zephyr/dts/bindings/spi/spi-device.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/usb/st,stm32-otgfs.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/usb/usb-controller.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/usb/usb-ep.yaml
+/home/ubuntu/work/zephyr/zephyr/dts/bindings/serial/zephyr,cdc-acm-uart.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/timer/st,stm32-timers.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/pwm/st,stm32-pwm.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/pwm/pwm-controller.yaml
@@ -77,6 +83,11 @@
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/nvmem/nvmem-consumer.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/ethernet/mdio/snps,dwmac-mdio.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/ethernet/mdio/mdio-controller.yaml
+/home/ubuntu/work/zephyr/zephyr/dts/bindings/ethernet/phy/ethernet-phy.yaml
+/home/ubuntu/work/zephyr/zephyr/dts/bindings/ethernet/phy/common/ethernet-phy-common.yaml
+/home/ubuntu/work/zephyr/zephyr/dts/bindings/ethernet/phy/common/ethernet-phy-default-speeds.yaml
+/home/ubuntu/work/zephyr/zephyr/dts/bindings/ethernet/phy/common/ethernet-phy-reset-gpios.yaml
+/home/ubuntu/work/zephyr/zephyr/dts/bindings/ethernet/phy/phy.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/ethernet/snps,dwmac-ptp-clock.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/cpu/arm,cortex-m4f.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/cpu/arm,cortex-m.yaml
@@ -97,3 +108,7 @@
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/smbus/smbus-controller.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/led/gpio-leds.yaml
 /home/ubuntu/work/zephyr/zephyr/dts/bindings/input/gpio-keys.yaml
+/home/ubuntu/work/zephyr/zephyr/dts/bindings/led/pwm-leds.yaml
+/home/ubuntu/work/zephyr/zephyr/dts/bindings/fs/zephyr,fstab.yaml
+/home/ubuntu/work/zephyr/zephyr/dts/bindings/fs/zephyr,fstab,littlefs.yaml
+/home/ubuntu/work/zephyr/zephyr/dts/bindings/fs/zephyr,fstab-common.yaml

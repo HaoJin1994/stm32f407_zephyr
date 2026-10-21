@@ -7,11 +7,24 @@ project(hello_world)
 
 target_sources(app PRIVATE 
     src/main.c
-    src/shell_led_cmd.c
-    src/shell_uart_cmd.c
-    src/flash_rw.c
-    src/littlefs.c
 )
+# LED模块
+if(CONFIG_MODULE_LED)
+    target_sources(app PRIVATE src/shell_led_cmd.c)
+endif()
+# cdc acm模块
+if(CONFIG_MODULE_CDC_ACM)
+    target_sources(app PRIVATE src/shell_uart_cmd.c)
+endif()
+# PWM LED模块
+if(CONFIG_MODULE_PWM)
+    target_sources(app PRIVATE src/shell_pwm_led_cmd.c)
+endif()
+# LITTLEFS模块
+if(CONFIG_MODULE_SPI_FLASH)
+    target_sources(app PRIVATE src/shell_littlefs_cmd.c)
+endif()
+
 
 target_include_directories(app PRIVATE
     include

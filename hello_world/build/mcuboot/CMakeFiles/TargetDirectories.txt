@@ -263,6 +263,8 @@
 /home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/modules/mcuboot/CMakeFiles/mcuboot_util.dir
 /home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/modules/mcuboot/CMakeFiles/edit_cache.dir
 /home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/modules/mcuboot/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/modules/zcbor/CMakeFiles/edit_cache.dir
+/home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/modules/zcbor/CMakeFiles/rebuild_cache.dir
 /home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/zephyr/kernel/CMakeFiles/kernel.dir
 /home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/zephyr/kernel/CMakeFiles/edit_cache.dir
 /home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/zephyr/kernel/CMakeFiles/rebuild_cache.dir

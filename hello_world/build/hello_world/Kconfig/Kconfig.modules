@@ -133,3 +133,9 @@ endmenu
 config ZEPHYR_MCUBOOT_MODULE
 	bool
 	default y
+menu "zcbor (/home/ubuntu/work/zephyr/modules/lib/zcbor)"
+osource "$(ZEPHYR_ZCBOR_KCONFIG)"
+config ZEPHYR_ZCBOR_MODULE
+	bool
+	default y
+endmenu

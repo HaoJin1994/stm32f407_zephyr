@@ -13,6 +13,10 @@ cmake:
      - '/home/ubuntu/work/zephyr/zephyr/dts/bindings'
     files:
      - '/home/ubuntu/work/stm32f407_zephyr/boards/st/stm32_f407/stm32f407.dts'
+     - 'modules/led/led.overlay'
+     - 'modules/cdc_acm/cdc_acm.overlay'
+     - 'modules/pwm/pwm.overlay'
+     - 'modules/spi_flash/spi_flash.overlay'
     include-dirs:
      - '/home/ubuntu/work/zephyr/modules/hal/ambiq/dts'
      - '/home/ubuntu/work/zephyr/modules/hal/atmel/include'
@@ -40,13 +44,26 @@ cmake:
      - '/home/ubuntu/work/zephyr/zephyr/dts/arm'
      - '/home/ubuntu/work/zephyr/zephyr/dts/arc'
      - '/home/ubuntu/work/zephyr/zephyr/dts'
+    user-files:
+     - 'modules/led/led.overlay'
+     - 'modules/cdc_acm/cdc_acm.overlay'
+     - 'modules/pwm/pwm.overlay'
+     - 'modules/spi_flash/spi_flash.overlay'
   kconfig:
     files:
      - '/home/ubuntu/work/stm32f407_zephyr/boards/st/stm32_f407/stm32f407_defconfig'
      - '/home/ubuntu/work/stm32f407_zephyr/hello_world/prj.conf'
+     - '/home/ubuntu/work/stm32f407_zephyr/hello_world/modules/led/led.conf'
+     - '/home/ubuntu/work/stm32f407_zephyr/hello_world/modules/cdc_acm/cdc_acm.conf'
+     - '/home/ubuntu/work/stm32f407_zephyr/hello_world/modules/pwm/pwm.conf'
+     - '/home/ubuntu/work/stm32f407_zephyr/hello_world/modules/spi_flash/spi_flash.conf'
      - '/home/ubuntu/work/stm32f407_zephyr/hello_world/build/hello_world/zephyr/.config.sysbuild'
     user-files:
-     - '/home/ubuntu/work/stm32f407_zephyr/hello_world/prj.conf'
+     - 'prj.conf'
+     - 'modules/led/led.conf'
+     - 'modules/cdc_acm/cdc_acm.conf'
+     - 'modules/pwm/pwm.conf'
+     - 'modules/spi_flash/spi_flash.conf'
   toolchain:
     name: 'zephyr'
     path: '/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1'

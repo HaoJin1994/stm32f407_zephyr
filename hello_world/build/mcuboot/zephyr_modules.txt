@@ -21,3 +21,4 @@
 "hal_stm32":"/home/ubuntu/work/zephyr/modules/hal/stm32":"/home/ubuntu/work/zephyr/modules/hal/stm32"
 "littlefs":"/home/ubuntu/work/zephyr/modules/fs/littlefs":"${ZEPHYR_LITTLEFS_CMAKE_DIR}"
 "mcuboot":"/home/ubuntu/work/zephyr/bootloader/mcuboot":"/home/ubuntu/work/zephyr/bootloader/mcuboot/boot/bootutil/zephyr"
+"zcbor":"/home/ubuntu/work/zephyr/modules/lib/zcbor":"${ZEPHYR_ZCBOR_CMAKE_DIR}"

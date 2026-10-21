@@ -3,92 +3,84 @@
 #include <zephyr/drivers/uart.h>
 #include <zephyr/shell/shell.h>
 #include <zephyr/sys/printk.h>
+#include <zephyr/drivers/gpio.h>
+#include <zephyr/drivers/flash.h>
 #include "main.h"
 
 LOG_MODULE_REGISTER(main,LOG_LEVEL_DBG);
 
 #define SLEEP_TIME_MS   2000
-#define UART1_NODE DT_ALIAS(uart1)
-const struct device *uart = DEVICE_DT_GET(UART1_NODE);
 
-#if 0
-/* 回调函数：为每个线程调用 */
-static void thread_stats_cb(const struct k_thread *thread, void *user_data)
-{
-    k_thread_runtime_stats_t stats;
-    int ret;
-
-    ret = k_thread_runtime_stats_get((k_tid_t)thread, &stats);
-    if (ret != 0) {
-        return;  /* 跳过无法获取统计信息的线程 */
-    }
-
-    /* 计算 CPU 使用率（基于系统总周期数） */
-    uint32_t total_cycles = k_cycle_get_32();
-    if (total_cycles == 0) {
-        return;  /* 避免除零 */
-    }
-
-    uint32_t usage = (uint32_t)((stats.execution_cycles * 100U) / total_cycles);
-
-    const char *name = k_thread_name_get((k_tid_t)thread);
-    printk("%-20s %3u%%\n", (name && name[0]) ? name : "unnamed", usage);
-}
-
-void print_thread_stats(void)
-{
-    printk("Thread Name          CPU Usage\n");
-    printk("--------------------------------\n");
-
-    k_thread_foreach(thread_stats_cb, NULL);
-}
+#ifdef CONFIG_MODULE_LED
+#define LED0_NODE DT_ALIAS(led1)
+static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 #endif
-static void uart_callback(const struct device *dev, void *user_data)
-{
-    uint8_t c;
 
-    uart_irq_update(dev);
-
-    // 检查是否有数据可读
-    if (uart_irq_rx_ready(dev)) {
-        // 读取数据
-        while (uart_fifo_read(dev, &c, 1) == 1) {
-            
-            //printk("%02x ", c);
-            uart_poll_out(dev, c);      
-        }
-        //printk("\r\n");
-        uart_poll_out(dev, '\n');
-
-    }
-}
+#define SPI_FLASH_COMPAT jedec_spi_nor
 
 
 int main(void)
 {
 
-    int value = 42;
-    printk("Application started\n");
-    
     k_msleep(SLEEP_TIME_MS);
-
-
-    if(!device_is_ready(uart)){
-         printk("UART device not ready\n");
-         return -1;
-    }
-    uart_irq_callback_set(uart,uart_callback);
-    
-    uart_irq_rx_enable(uart);
-
+    printk("Application started\n");
+  
     printk("UART interrupt mode enabled\n");
+
 
     //littlefs_example();
     //flash_test();
     //k_msleep(SLEEP_TIME_MS);
     //print_thread_stats();
+#ifdef CONFIG_MODULE_LED
+    if(!gpio_is_ready_dt(&led)){
+        printk("gpio is not ready\n");
+        return -1;
+    }
+    int ret = gpio_pin_configure_dt(&led,GPIO_OUTPUT_ACTIVE);
+    if(ret < 0){
+        printk("Failed to configure LED\n");
+        return ret;
+    }
+#endif
+
+
+#if 0
+ 
+    char data[32] = {0};
+
+    const struct device *flash_dev = DEVICE_DT_GET_ONE(SPI_FLASH_COMPAT);
+    if(!device_is_ready(flash_dev)){
+        printk("SPI flash device is not ready\n");
+        return -1;
+    }
+    printk("SPI flash device is ready\n");
+    int rc = flash_erase(flash_dev,0x0,0x1000);
+    if(rc < 0){
+        printk("Failed to erase flash\n");
+        return rc;
+    }
+    rc = flash_write(flash_dev,0x0,&"hello world",12);
+    if(rc < 0){
+        printk("Failed to write flash\n");
+        return rc;
+    }
+    printk("Flash write success\n");
+    rc = flash_read(flash_dev,0x0,data,12);
+    if(rc < 0){
+        printk("Failed to read flash\n");
+        return rc;
+    }
+    printk("Read data: %s\n",data);
+
+#endif
+
     while(1){
-        k_sleep(K_FOREVER);
+        //闪烁LED
+#ifdef CONFIG_MODULE_LED
+        gpio_pin_toggle_dt(&led);
+#endif
+        k_msleep(SLEEP_TIME_MS);
     }
     return 0;
 

@@ -5,9 +5,9 @@
 #include <stdlib.h>
 #include <zephyr/drivers/gpio.h>
 
-#define LED0_NODE DT_ALIAS(led0)
-
+#define LED0_NODE DT_ALIAS(led1)
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
+
 
 LOG_MODULE_REGISTER(led_shell,LOG_LEVEL_INF);
 
@@ -28,6 +28,8 @@ static int cmd_led_on(const struct shell *sh, size_t argc, char **argv)
     if(ret < 0){
         shell_print(sh,"Failed to set gpio!");
     }
+
+
     shell_print(sh,"Turn led on!");
     return 0;
 }
@@ -49,6 +51,7 @@ static int cmd_led_off(const struct shell *sh, size_t argc, char **argv)
     if(ret < 0){
         shell_print(sh,"Failed to set gpio!");
     }
+
     shell_print(sh,"Turn led off!");
 
     return 0;

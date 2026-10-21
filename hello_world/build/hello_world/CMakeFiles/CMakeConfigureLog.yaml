@@ -279,12 +279,35 @@ events:
         path: "/home/ubuntu/work/zephyr/bootloader/share/cps/zephyrbuild.cps"
         mode: "cps"
         reason: "no_exist"
+      -
+        path: "/home/ubuntu/work/zephyr/.marscode/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/ubuntu/work/zephyr/.marscode/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/ubuntu/work/zephyr/.marscode/lib/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/ubuntu/work/zephyr/.marscode/lib/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/ubuntu/work/zephyr/.marscode/share/cps/ZephyrBuild.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/ubuntu/work/zephyr/.marscode/share/cps/zephyrbuild.cps"
+        mode: "cps"
+        reason: "no_exist"
     found: null
     search_context:
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -298,6 +321,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find_package-v1"
     backtrace:
@@ -395,9 +419,8 @@ events:
     found: null
     search_context:
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -411,6 +434,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find_package-v1"
     backtrace:
@@ -505,9 +529,8 @@ events:
       version: "1.0.1"
     search_context:
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -521,6 +544,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -547,6 +571,7 @@ events:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/sbin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -559,10 +584,12 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     searched_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/gperf"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/sbin/gperf"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/gperf"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/gperf"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/gperf"
       - "/snap/bin/gperf"
       - "/home/ubuntu/.local/bin/gperf"
@@ -575,9 +602,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -591,6 +617,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -617,6 +644,7 @@ events:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/sbin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -629,14 +657,14 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     found: "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/openocd"
     search_context:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -650,6 +678,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -676,6 +705,7 @@ events:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/sbin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -688,14 +718,14 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     found: "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/bossac"
     search_context:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -709,6 +739,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -737,6 +768,7 @@ events:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/sbin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/"
       - "/home/ubuntu/work/zephyr/bootloader/mcuboot/scripts/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -749,6 +781,7 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     searched_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/imgtool.py"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/imgtool"
@@ -761,9 +794,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -777,6 +809,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -803,6 +836,7 @@ events:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/sbin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -815,10 +849,12 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     searched_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/winpty"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/sbin/winpty"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/winpty"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/winpty"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/winpty"
       - "/snap/bin/winpty"
       - "/home/ubuntu/.local/bin/winpty"
@@ -831,14 +867,14 @@ events:
       - "/bin/winpty"
       - "/usr/games/winpty"
       - "/usr/local/games/winpty"
+      - "/home/ubuntu/go/bin/winpty"
     found: false
     search_context:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -852,6 +888,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -882,9 +919,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -898,6 +934,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -924,6 +961,7 @@ events:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/sbin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -936,14 +974,14 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     found: "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/dtc"
     search_context:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -957,6 +995,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -984,6 +1023,7 @@ events:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/sbin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -996,10 +1036,12 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     searched_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/ccache"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/sbin/ccache"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/ccache"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/ccache"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/ccache"
       - "/snap/bin/ccache"
       - "/home/ubuntu/.local/bin/ccache"
@@ -1012,14 +1054,14 @@ events:
       - "/bin/ccache"
       - "/usr/games/ccache"
       - "/usr/local/games/ccache"
+      - "/home/ubuntu/go/bin/ccache"
     found: false
     search_context:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -1033,6 +1075,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1063,9 +1106,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -1079,6 +1121,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1109,9 +1152,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -1125,6 +1167,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1155,9 +1198,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -1171,6 +1213,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1201,9 +1244,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -1217,6 +1259,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1247,9 +1290,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -1263,6 +1305,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1293,9 +1336,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -1309,6 +1351,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1339,9 +1382,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -1355,6 +1397,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1385,9 +1428,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -1401,6 +1443,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1431,9 +1474,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -1447,6 +1489,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1477,9 +1520,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -1493,6 +1535,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1523,9 +1566,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -1539,6 +1581,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1569,9 +1612,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -1585,6 +1627,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1615,9 +1658,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -1631,6 +1673,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1657,6 +1700,7 @@ events:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/sbin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -1669,10 +1713,12 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     searched_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/uname"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/sbin/uname"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/uname"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/uname"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/uname"
       - "/snap/bin/uname"
       - "/home/ubuntu/.local/bin/uname"
@@ -1685,9 +1731,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -1701,6 +1746,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -1741,6 +1787,7 @@ events:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/sbin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -1753,6 +1800,7 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     searched_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/ninja-build"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/ninja"
@@ -1763,6 +1811,9 @@ events:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/ninja-build"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/ninja"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/samu"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/ninja-build"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/ninja"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/samu"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/ninja-build"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/ninja"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/samu"
@@ -1784,9 +1835,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -1800,6 +1850,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1834,9 +1885,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -1850,6 +1900,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -1902,6 +1953,7 @@ events:
       - "dlltool"
     candidate_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -1914,8 +1966,10 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     searched_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-dlltool"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/arm-zephyr-eabi-dlltool"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/arm-zephyr-eabi-dlltool"
       - "/snap/bin/arm-zephyr-eabi-dlltool"
       - "/home/ubuntu/.local/bin/arm-zephyr-eabi-dlltool"
@@ -1928,7 +1982,9 @@ events:
       - "/bin/arm-zephyr-eabi-dlltool"
       - "/usr/games/arm-zephyr-eabi-dlltool"
       - "/usr/local/games/arm-zephyr-eabi-dlltool"
+      - "/home/ubuntu/go/bin/arm-zephyr-eabi-dlltool"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/dlltool"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/dlltool"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/dlltool"
       - "/snap/bin/dlltool"
       - "/home/ubuntu/.local/bin/dlltool"
@@ -1941,14 +1997,14 @@ events:
       - "/bin/dlltool"
       - "/usr/games/dlltool"
       - "/usr/local/games/dlltool"
+      - "/home/ubuntu/go/bin/dlltool"
     found: false
     search_context:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -1962,6 +2018,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1988,6 +2045,7 @@ events:
       - "addr2line"
     candidate_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -2000,14 +2058,14 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     found: "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-addr2line"
     search_context:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -2021,6 +2079,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -2047,6 +2106,7 @@ events:
       - "tapi"
     candidate_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -2059,8 +2119,10 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     searched_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-tapi"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/arm-zephyr-eabi-tapi"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/arm-zephyr-eabi-tapi"
       - "/snap/bin/arm-zephyr-eabi-tapi"
       - "/home/ubuntu/.local/bin/arm-zephyr-eabi-tapi"
@@ -2073,7 +2135,9 @@ events:
       - "/bin/arm-zephyr-eabi-tapi"
       - "/usr/games/arm-zephyr-eabi-tapi"
       - "/usr/local/games/arm-zephyr-eabi-tapi"
+      - "/home/ubuntu/go/bin/arm-zephyr-eabi-tapi"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/tapi"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/tapi"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/tapi"
       - "/snap/bin/tapi"
       - "/home/ubuntu/.local/bin/tapi"
@@ -2086,14 +2150,14 @@ events:
       - "/bin/tapi"
       - "/usr/games/tapi"
       - "/usr/local/games/tapi"
+      - "/home/ubuntu/go/bin/tapi"
     found: false
     search_context:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -2107,6 +2171,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -2135,6 +2200,7 @@ events:
       - "arm-zephyr-eabi-gcc-ar"
     candidate_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -2147,8 +2213,10 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     searched_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar-14.3"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/arm-zephyr-eabi-gcc-ar-14.3"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/arm-zephyr-eabi-gcc-ar-14.3"
       - "/snap/bin/arm-zephyr-eabi-gcc-ar-14.3"
       - "/home/ubuntu/.local/bin/arm-zephyr-eabi-gcc-ar-14.3"
@@ -2161,7 +2229,9 @@ events:
       - "/bin/arm-zephyr-eabi-gcc-ar-14.3"
       - "/usr/games/arm-zephyr-eabi-gcc-ar-14.3"
       - "/usr/local/games/arm-zephyr-eabi-gcc-ar-14.3"
+      - "/home/ubuntu/go/bin/arm-zephyr-eabi-gcc-ar-14.3"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar-14"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/arm-zephyr-eabi-gcc-ar-14"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/arm-zephyr-eabi-gcc-ar-14"
       - "/snap/bin/arm-zephyr-eabi-gcc-ar-14"
       - "/home/ubuntu/.local/bin/arm-zephyr-eabi-gcc-ar-14"
@@ -2174,7 +2244,9 @@ events:
       - "/bin/arm-zephyr-eabi-gcc-ar-14"
       - "/usr/games/arm-zephyr-eabi-gcc-ar-14"
       - "/usr/local/games/arm-zephyr-eabi-gcc-ar-14"
+      - "/home/ubuntu/go/bin/arm-zephyr-eabi-gcc-ar-14"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar14"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/arm-zephyr-eabi-gcc-ar14"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/arm-zephyr-eabi-gcc-ar14"
       - "/snap/bin/arm-zephyr-eabi-gcc-ar14"
       - "/home/ubuntu/.local/bin/arm-zephyr-eabi-gcc-ar14"
@@ -2187,14 +2259,14 @@ events:
       - "/bin/arm-zephyr-eabi-gcc-ar14"
       - "/usr/games/arm-zephyr-eabi-gcc-ar14"
       - "/usr/local/games/arm-zephyr-eabi-gcc-ar14"
+      - "/home/ubuntu/go/bin/arm-zephyr-eabi-gcc-ar14"
     found: "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar"
     search_context:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -2208,6 +2280,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -2236,6 +2309,7 @@ events:
       - "arm-zephyr-eabi-gcc-ranlib"
     candidate_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -2248,8 +2322,10 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     searched_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib-14.3"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/arm-zephyr-eabi-gcc-ranlib-14.3"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/arm-zephyr-eabi-gcc-ranlib-14.3"
       - "/snap/bin/arm-zephyr-eabi-gcc-ranlib-14.3"
       - "/home/ubuntu/.local/bin/arm-zephyr-eabi-gcc-ranlib-14.3"
@@ -2262,7 +2338,9 @@ events:
       - "/bin/arm-zephyr-eabi-gcc-ranlib-14.3"
       - "/usr/games/arm-zephyr-eabi-gcc-ranlib-14.3"
       - "/usr/local/games/arm-zephyr-eabi-gcc-ranlib-14.3"
+      - "/home/ubuntu/go/bin/arm-zephyr-eabi-gcc-ranlib-14.3"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib-14"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/arm-zephyr-eabi-gcc-ranlib-14"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/arm-zephyr-eabi-gcc-ranlib-14"
       - "/snap/bin/arm-zephyr-eabi-gcc-ranlib-14"
       - "/home/ubuntu/.local/bin/arm-zephyr-eabi-gcc-ranlib-14"
@@ -2275,7 +2353,9 @@ events:
       - "/bin/arm-zephyr-eabi-gcc-ranlib-14"
       - "/usr/games/arm-zephyr-eabi-gcc-ranlib-14"
       - "/usr/local/games/arm-zephyr-eabi-gcc-ranlib-14"
+      - "/home/ubuntu/go/bin/arm-zephyr-eabi-gcc-ranlib-14"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib14"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/arm-zephyr-eabi-gcc-ranlib14"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/arm-zephyr-eabi-gcc-ranlib14"
       - "/snap/bin/arm-zephyr-eabi-gcc-ranlib14"
       - "/home/ubuntu/.local/bin/arm-zephyr-eabi-gcc-ranlib14"
@@ -2288,14 +2368,14 @@ events:
       - "/bin/arm-zephyr-eabi-gcc-ranlib14"
       - "/usr/games/arm-zephyr-eabi-gcc-ranlib14"
       - "/usr/local/games/arm-zephyr-eabi-gcc-ranlib14"
+      - "/home/ubuntu/go/bin/arm-zephyr-eabi-gcc-ranlib14"
     found: "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib"
     search_context:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -2309,6 +2389,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -2343,9 +2424,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -2359,6 +2439,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -2413,6 +2494,7 @@ events:
       - "arm-zephyr-eabi-gcc-ar"
     candidate_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -2425,8 +2507,10 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     searched_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar-14.3"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/arm-zephyr-eabi-gcc-ar-14.3"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/arm-zephyr-eabi-gcc-ar-14.3"
       - "/snap/bin/arm-zephyr-eabi-gcc-ar-14.3"
       - "/home/ubuntu/.local/bin/arm-zephyr-eabi-gcc-ar-14.3"
@@ -2439,7 +2523,9 @@ events:
       - "/bin/arm-zephyr-eabi-gcc-ar-14.3"
       - "/usr/games/arm-zephyr-eabi-gcc-ar-14.3"
       - "/usr/local/games/arm-zephyr-eabi-gcc-ar-14.3"
+      - "/home/ubuntu/go/bin/arm-zephyr-eabi-gcc-ar-14.3"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar-14"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/arm-zephyr-eabi-gcc-ar-14"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/arm-zephyr-eabi-gcc-ar-14"
       - "/snap/bin/arm-zephyr-eabi-gcc-ar-14"
       - "/home/ubuntu/.local/bin/arm-zephyr-eabi-gcc-ar-14"
@@ -2452,7 +2538,9 @@ events:
       - "/bin/arm-zephyr-eabi-gcc-ar-14"
       - "/usr/games/arm-zephyr-eabi-gcc-ar-14"
       - "/usr/local/games/arm-zephyr-eabi-gcc-ar-14"
+      - "/home/ubuntu/go/bin/arm-zephyr-eabi-gcc-ar-14"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar14"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/arm-zephyr-eabi-gcc-ar14"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/arm-zephyr-eabi-gcc-ar14"
       - "/snap/bin/arm-zephyr-eabi-gcc-ar14"
       - "/home/ubuntu/.local/bin/arm-zephyr-eabi-gcc-ar14"
@@ -2465,14 +2553,14 @@ events:
       - "/bin/arm-zephyr-eabi-gcc-ar14"
       - "/usr/games/arm-zephyr-eabi-gcc-ar14"
       - "/usr/local/games/arm-zephyr-eabi-gcc-ar14"
+      - "/home/ubuntu/go/bin/arm-zephyr-eabi-gcc-ar14"
     found: "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar"
     search_context:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -2486,6 +2574,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -2514,6 +2603,7 @@ events:
       - "arm-zephyr-eabi-gcc-ranlib"
     candidate_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -2526,8 +2616,10 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     searched_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib-14.3"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/arm-zephyr-eabi-gcc-ranlib-14.3"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/arm-zephyr-eabi-gcc-ranlib-14.3"
       - "/snap/bin/arm-zephyr-eabi-gcc-ranlib-14.3"
       - "/home/ubuntu/.local/bin/arm-zephyr-eabi-gcc-ranlib-14.3"
@@ -2540,7 +2632,9 @@ events:
       - "/bin/arm-zephyr-eabi-gcc-ranlib-14.3"
       - "/usr/games/arm-zephyr-eabi-gcc-ranlib-14.3"
       - "/usr/local/games/arm-zephyr-eabi-gcc-ranlib-14.3"
+      - "/home/ubuntu/go/bin/arm-zephyr-eabi-gcc-ranlib-14.3"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib-14"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/arm-zephyr-eabi-gcc-ranlib-14"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/arm-zephyr-eabi-gcc-ranlib-14"
       - "/snap/bin/arm-zephyr-eabi-gcc-ranlib-14"
       - "/home/ubuntu/.local/bin/arm-zephyr-eabi-gcc-ranlib-14"
@@ -2553,7 +2647,9 @@ events:
       - "/bin/arm-zephyr-eabi-gcc-ranlib-14"
       - "/usr/games/arm-zephyr-eabi-gcc-ranlib-14"
       - "/usr/local/games/arm-zephyr-eabi-gcc-ranlib-14"
+      - "/home/ubuntu/go/bin/arm-zephyr-eabi-gcc-ranlib-14"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib14"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/arm-zephyr-eabi-gcc-ranlib14"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/arm-zephyr-eabi-gcc-ranlib14"
       - "/snap/bin/arm-zephyr-eabi-gcc-ranlib14"
       - "/home/ubuntu/.local/bin/arm-zephyr-eabi-gcc-ranlib14"
@@ -2566,14 +2662,14 @@ events:
       - "/bin/arm-zephyr-eabi-gcc-ranlib14"
       - "/usr/games/arm-zephyr-eabi-gcc-ranlib14"
       - "/usr/local/games/arm-zephyr-eabi-gcc-ranlib14"
+      - "/home/ubuntu/go/bin/arm-zephyr-eabi-gcc-ranlib14"
     found: "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib"
     search_context:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -2587,6 +2683,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -2617,9 +2714,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -2633,6 +2729,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PROGRAM_PATH:
         - "/bin"
@@ -2681,6 +2778,7 @@ events:
       - "arm-zephyr-eabi-gcc-ar"
     candidate_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -2693,8 +2791,10 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     searched_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar-"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/arm-zephyr-eabi-gcc-ar-"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/arm-zephyr-eabi-gcc-ar-"
       - "/snap/bin/arm-zephyr-eabi-gcc-ar-"
       - "/home/ubuntu/.local/bin/arm-zephyr-eabi-gcc-ar-"
@@ -2707,7 +2807,9 @@ events:
       - "/bin/arm-zephyr-eabi-gcc-ar-"
       - "/usr/games/arm-zephyr-eabi-gcc-ar-"
       - "/usr/local/games/arm-zephyr-eabi-gcc-ar-"
+      - "/home/ubuntu/go/bin/arm-zephyr-eabi-gcc-ar-"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar-"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/arm-zephyr-eabi-gcc-ar-"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/arm-zephyr-eabi-gcc-ar-"
       - "/snap/bin/arm-zephyr-eabi-gcc-ar-"
       - "/home/ubuntu/.local/bin/arm-zephyr-eabi-gcc-ar-"
@@ -2720,14 +2822,14 @@ events:
       - "/bin/arm-zephyr-eabi-gcc-ar-"
       - "/usr/games/arm-zephyr-eabi-gcc-ar-"
       - "/usr/local/games/arm-zephyr-eabi-gcc-ar-"
+      - "/home/ubuntu/go/bin/arm-zephyr-eabi-gcc-ar-"
     found: "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar"
     search_context:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -2741,6 +2843,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PROGRAM_PATH:
         - "/bin"
@@ -2772,6 +2875,7 @@ events:
       - "arm-zephyr-eabi-gcc-ranlib"
     candidate_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -2784,8 +2888,10 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     searched_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/arm-zephyr-eabi-gcc-ranlib-"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/arm-zephyr-eabi-gcc-ranlib-"
       - "/snap/bin/arm-zephyr-eabi-gcc-ranlib-"
       - "/home/ubuntu/.local/bin/arm-zephyr-eabi-gcc-ranlib-"
@@ -2798,7 +2904,9 @@ events:
       - "/bin/arm-zephyr-eabi-gcc-ranlib-"
       - "/usr/games/arm-zephyr-eabi-gcc-ranlib-"
       - "/usr/local/games/arm-zephyr-eabi-gcc-ranlib-"
+      - "/home/ubuntu/go/bin/arm-zephyr-eabi-gcc-ranlib-"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib-"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/arm-zephyr-eabi-gcc-ranlib-"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/arm-zephyr-eabi-gcc-ranlib-"
       - "/snap/bin/arm-zephyr-eabi-gcc-ranlib-"
       - "/home/ubuntu/.local/bin/arm-zephyr-eabi-gcc-ranlib-"
@@ -2811,14 +2919,14 @@ events:
       - "/bin/arm-zephyr-eabi-gcc-ranlib-"
       - "/usr/games/arm-zephyr-eabi-gcc-ranlib-"
       - "/usr/local/games/arm-zephyr-eabi-gcc-ranlib-"
+      - "/home/ubuntu/go/bin/arm-zephyr-eabi-gcc-ranlib-"
     found: "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib"
     search_context:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -2832,6 +2940,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PROGRAM_PATH:
         - "/bin"
@@ -2858,6 +2967,7 @@ events:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/sbin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -2870,11 +2980,13 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
       - "/home/ubuntu/work/zephyr/zephyr/scripts/build/"
     searched_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/gen_kobject_list"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/sbin/gen_kobject_list"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/gen_kobject_list"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/gen_kobject_list"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/gen_kobject_list"
       - "/snap/bin/gen_kobject_list"
       - "/home/ubuntu/.local/bin/gen_kobject_list"
@@ -2887,10 +2999,12 @@ events:
       - "/bin/gen_kobject_list"
       - "/usr/games/gen_kobject_list"
       - "/usr/local/games/gen_kobject_list"
+      - "/home/ubuntu/go/bin/gen_kobject_list"
       - "/home/ubuntu/work/zephyr/zephyr/scripts/build/gen_kobject_list"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/gen_kobject_list.py"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/sbin/gen_kobject_list.py"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/gen_kobject_list.py"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/gen_kobject_list.py"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/gen_kobject_list.py"
       - "/snap/bin/gen_kobject_list.py"
       - "/home/ubuntu/.local/bin/gen_kobject_list.py"
@@ -2903,14 +3017,14 @@ events:
       - "/bin/gen_kobject_list.py"
       - "/usr/games/gen_kobject_list.py"
       - "/usr/local/games/gen_kobject_list.py"
+      - "/home/ubuntu/go/bin/gen_kobject_list.py"
     found: "/home/ubuntu/work/zephyr/zephyr/scripts/build/gen_kobject_list.py"
     search_context:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -2924,6 +3038,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PROGRAM_PATH:
         - "/bin"
@@ -2948,6 +3063,7 @@ events:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/sbin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -2960,10 +3076,12 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     searched_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/puncover"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/sbin/puncover"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/puncover"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/puncover"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/puncover"
       - "/snap/bin/puncover"
       - "/home/ubuntu/.local/bin/puncover"
@@ -2976,14 +3094,14 @@ events:
       - "/bin/puncover"
       - "/usr/games/puncover"
       - "/usr/local/games/puncover"
+      - "/home/ubuntu/go/bin/puncover"
     found: false
     search_context:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -2997,6 +3115,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PROGRAM_PATH:
         - "/bin"
@@ -3021,6 +3140,7 @@ events:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/sbin/"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/"
       - "/snap/bin/"
       - "/home/ubuntu/.local/bin/"
@@ -3033,10 +3153,12 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/home/ubuntu/go/bin/"
     searched_directories:
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/pahole"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/sbin/pahole"
       - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/pahole"
+      - "/home/ubuntu/work/zephyr/zephyr/scripts/pahole"
       - "/home/ubuntu/work/zephyr/zephyr/.venv/bin/pahole"
       - "/snap/bin/pahole"
       - "/home/ubuntu/.local/bin/pahole"
@@ -3049,14 +3171,14 @@ events:
       - "/bin/pahole"
       - "/usr/games/pahole"
       - "/usr/local/games/pahole"
+      - "/home/ubuntu/go/bin/pahole"
     found: false
     search_context:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -3070,6 +3192,7 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PROGRAM_PATH:
         - "/bin"
@@ -3188,9 +3311,8 @@ events:
       CMAKE_PREFIX_PATH:
         - "/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr"
       ENV{PATH}:
+        - "/home/ubuntu/work/zephyr/zephyr/scripts"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
-        - "/snap/bin"
-        - "/snap/bin"
         - "/snap/bin"
         - "/snap/bin"
         - "/home/ubuntu/work/zephyr/zephyr/.venv/bin"
@@ -3204,5 +3326,6 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/home/ubuntu/go/bin"
       CMAKE_INSTALL_PREFIX: "/usr/local"
 ...

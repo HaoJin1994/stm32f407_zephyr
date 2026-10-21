@@ -6,7 +6,7 @@
 
 /dts-v1/;
 #include <st/f4/stm32f407Xg.dtsi>
-#include <st/f4/stm32f407v(e-g)tx-pinctrl.dtsi>
+#include <st/f4/stm32f407z(e-g)tx-pinctrl.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <zephyr/dt-bindings/dma/stm32_dma.h> 
 
@@ -17,24 +17,21 @@
     chosen {
         zephyr,console = &usart1;
         zephyr,shell-uart = &usart1;
+        zephyr,uart-mcumgr = &usart1; //&cdc_acm_uart0;
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
         zephyr,ccm = &ccm0;
         zephyr,code-partition = &slot0_partition;
     };
 
-    leds {
+    
+    eth_phy_reset: eth-phy-reset {
         compatible = "gpio-leds";
-        led_0: led_0 {
-            gpios = <&gpiof 9 GPIO_ACTIVE_LOW>;
-            label = "DS0";
-        };
-        led_1: led_1 {
-            gpios = <&gpiof 10 GPIO_ACTIVE_LOW>;
-            label = "DS1";
+        phy_reset_pin: phy-reset-pin {
+            gpios = <&gpiod 3 GPIO_ACTIVE_LOW>;
+            label = "ETH_PHY_RESET";
         };
     };
-
     gpio_keys {
         compatible = "gpio-keys";
         user_button: button {
@@ -59,14 +56,15 @@
         };
     };
 
+
     aliases {
-        led0 = &led_0;
-        led1 = &led_1;
+
         sw0 = &user_button;
         sw1 = &key0;
         sw2 = &key1;
         sw3 = &key2;
-        uart1 = &usart2;
+        watchdog0 = &iwdg;
+        //uart1 = &usart2;
     };
 };
 
@@ -81,16 +79,7 @@
     status = "okay";
 
 };
-&usart2 {
-    pinctrl-0 = <&usart2_tx_pa2 &usart2_rx_pa3>;
-    pinctrl-names = "default";
-    current-speed = <115200>;
-    status = "okay";
 
-    /*dmas = <&dma1 6 4 (STM32_DMA_PERIPH_TX | STM32_DMA_PRIORITY_HIGH) 0>,
-           <&dma1 5 4 (STM32_DMA_PERIPH_RX | STM32_DMA_PRIORITY_HIGH) 0>;
-    dma-names = "tx", "rx";*/
-};
 
 &clk_lsi {
     status = "okay";
@@ -129,11 +118,38 @@
     };
 };
 
-zephyr_udc0: &usbotg_fs {
-    pinctrl-0 = <&usb_otg_fs_dm_pa11 &usb_otg_fs_dp_pa12>;
+
+&mac {
+    status = "okay";
+    zephyr,deferred-init;   //禁止自动初始化，延迟到应用程序中手动调用eth_phy_reset()函数进行初始化
+    pinctrl-0 = <&eth_rxd0_pc4 &eth_rxd1_pc5 
+                 &eth_ref_clk_pa1 &eth_crs_dv_pa7 
+                 &eth_tx_en_pg11 &eth_txd0_pg13 
+                 &eth_txd1_pg14>;
     pinctrl-names = "default";
+
+    phy-connection-type = "rmii";
+    phy-handle = <&eth_phy>;
+};     
+&mdio {
+    status = "okay";
+    zephyr,deferred-init;   //禁止自动初始化，延迟到应用程序中手动调用eth_phy_reset()函数进行初始化
+    pinctrl-0 = <&eth_mdio_pa2 &eth_mdc_pc1>;
+    pinctrl-names = "default";
+
+    eth_phy: ethernet-phy@0 {
+        compatible = "ethernet-phy";
+        reg = <0>;  
+        zephyr,deferred-init;
+        // reset-gpios = <&gpiod 3 GPIO_ACTIVE_LOW>;
+        //reset-assert-duration-us = <120000>;
+        //reset-deassertion-timeout-ms = <50>;
+    };
+};   
+&iwdg {
     status = "okay";
 };
+
 /*
  * Flash secctor 0 - 3: sector size = 16K
  * Flash secctor 4 : sector size = 64K
@@ -158,16 +174,12 @@ zephyr_udc0: &usbotg_fs {
 
         slot1_partition: partition@80000 {
             label = "image-1";
-            reg = <0x00080000 DT_SIZE_K(256)>;  /* 0x80000 到 0xDFFFF */
+            reg = <0x00080000 DT_SIZE_K(384)>;  /* 0x80000 到 0xDFFFF */
         };
-        data_partition: partition@c0000 { 
-            label = "data";
-            reg = <0x000c0000 DT_SIZE_K(128)>;
-        };
+
         storage_partition: partition@e0000 {
             label = "storage";
             reg = <0x000E0000 DT_SIZE_K(128)>;
         };
     };
 };
-        

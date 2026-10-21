@@ -105,6 +105,7 @@
 		"/home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/modules/hal_stm32/stm32cube/stm32f4xx/cmake_install.cmake",
 		"/home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/modules/littlefs/cmake_install.cmake",
 		"/home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/modules/mcuboot/cmake_install.cmake",
+		"/home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/modules/zcbor/cmake_install.cmake",
 		"/home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/zephyr/kernel/cmake_install.cmake",
 		"/home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/zephyr/kernel/sys/cmake_install.cmake",
 		"/home/ubuntu/work/stm32f407_zephyr/hello_world/build/mcuboot/zephyr/cmake/flash/cmake_install.cmake",
