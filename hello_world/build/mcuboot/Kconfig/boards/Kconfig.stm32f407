@@ -1,2 +1,0 @@
-# Load board Kconfig descriptions.
-osource "/home/ubuntu/work/stm32f407_zephyr/boards/st/stm32_f407/Kconfig.stm32f407"

@@ -24,6 +24,10 @@ CONFIGS="${CONFIGS};modules/pwm/pwm.conf"
 OVERLAYS="${OVERLAYS};modules/spi_flash/spi_flash.overlay"
 CONFIGS="${CONFIGS};modules/spi_flash/spi_flash.conf" 
 
+# i2c_eeprom 模块
+OVERLAYS="${OVERLAYS};modules/eeprom/eeprom.overlay"
+CONFIGS="${CONFIGS};modules/eeprom/eeprom.conf"
+
 OVERLAYS=${OVERLAYS#;}
 
 echo "=== Build Configuration ==="
@@ -31,7 +35,7 @@ echo "Overlays: ${OVERLAYS}"
 echo "Configs: ${CONFIGS}"
 echo "=========================="
 
-west build -b stm32f407 --sysbuild -p always -- \
+west build -b stm32f407  -p always -- \
   -DBOARD_ROOT=/home/ubuntu/work/stm32f407_zephyr \
   -DDTC_OVERLAY_FILE="${OVERLAYS}" \
   -DCONF_FILE="${CONFIGS}"
