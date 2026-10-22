@@ -12,7 +12,9 @@
 /home/ubuntu/work/stm32f407_zephyr/hello_world/build/Kconfig/soc/Kconfig
 /home/ubuntu/work/stm32f407_zephyr/hello_world/build/Kconfig/soc/Kconfig.defconfig
 /home/ubuntu/work/stm32f407_zephyr/hello_world/build/Kconfig/soc/Kconfig.soc
+/home/ubuntu/work/stm32f407_zephyr/hello_world/modules/adc/Kconfig
 /home/ubuntu/work/stm32f407_zephyr/hello_world/modules/cdc_acm/Kconfig
+/home/ubuntu/work/stm32f407_zephyr/hello_world/modules/dac/Kconfig
 /home/ubuntu/work/stm32f407_zephyr/hello_world/modules/eeprom/Kconfig
 /home/ubuntu/work/stm32f407_zephyr/hello_world/modules/led/Kconfig
 /home/ubuntu/work/stm32f407_zephyr/hello_world/modules/pwm/Kconfig

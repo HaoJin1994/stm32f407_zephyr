@@ -36,4 +36,5 @@ empty_file.o: /home/ubuntu/work/zephyr/zephyr/misc/empty_file.c \
  /home/ubuntu/work/zephyr/zephyr/include/zephyr/dt-bindings/input/input-event-codes.h \
  modules/led/led.overlay modules/cdc_acm/cdc_acm.overlay \
  modules/pwm/pwm.overlay modules/spi_flash/spi_flash.overlay \
- modules/eeprom/eeprom.overlay
+ modules/eeprom/eeprom.overlay modules/adc/adc.overlay \
+ modules/dac/dac.overlay

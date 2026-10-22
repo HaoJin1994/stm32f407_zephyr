@@ -116,6 +116,10 @@ __device_deps_end = .;
  } > FLASH
 device_api_area : SUBALIGN(4)
 {
+ _adc_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._adc_driver_api.static.*))); _adc_driver_api_list_end = .;;
+ _adc_driver_api_ext_end = .;
+ _dac_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._dac_driver_api.static.*))); _dac_driver_api_list_end = .;;
+ _dac_driver_api_ext_end = .;
  _eeprom_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._eeprom_driver_api.static.*))); _eeprom_driver_api_list_end = .;;
  _eeprom_driver_api_ext_end = .;
  _flash_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._flash_driver_api.static.*))); _flash_driver_api_list_end = .;;
@@ -144,8 +148,6 @@ device_api_area : SUBALIGN(4)
  _dmic_driver_api_ext_end = .;
  _crypto_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._crypto_driver_api.static.*))); _crypto_driver_api_list_end = .;;
  _crypto_driver_api_ext_end = .;
- _adc_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._adc_driver_api.static.*))); _adc_driver_api_list_end = .;;
- _adc_driver_api_ext_end = .;
  _auxdisplay_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._auxdisplay_driver_api.static.*))); _auxdisplay_driver_api_list_end = .;;
  _auxdisplay_driver_api_ext_end = .;
  _bbram_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._bbram_driver_api.static.*))); _bbram_driver_api_list_end = .;;
@@ -176,8 +178,6 @@ device_api_area : SUBALIGN(4)
  _counter_driver_api_ext_end = .;
  _crc_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._crc_driver_api.static.*))); _crc_driver_api_list_end = .;;
  _crc_driver_api_ext_end = .;
- _dac_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._dac_driver_api.static.*))); _dac_driver_api_list_end = .;;
- _dac_driver_api_ext_end = .;
  _dai_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._dai_driver_api.static.*))); _dai_driver_api_list_end = .;;
  _dai_driver_api_ext_end = .;
  _dali_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._dali_driver_api.static.*))); _dali_driver_api_list_end = .;;

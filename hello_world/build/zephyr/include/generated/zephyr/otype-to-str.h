@@ -45,6 +45,8 @@ case K_OBJ_ADC_DECODER_API: ret = "adc_decoder_api"; break;
 case K_OBJ_SENSOR_DECODER_API: ret = "sensor_decoder_api"; break;
 #endif
 /* Driver subsystems */
+case K_OBJ_DRIVER_ADC: ret = "adc driver"; break;
+case K_OBJ_DRIVER_DAC: ret = "dac driver"; break;
 case K_OBJ_DRIVER_EEPROM: ret = "eeprom driver"; break;
 case K_OBJ_DRIVER_FLASH: ret = "flash driver"; break;
 case K_OBJ_DRIVER_GPIO: ret = "gpio driver"; break;
@@ -58,7 +60,6 @@ case K_OBJ_DRIVER_SHARED_IRQ: ret = "shared_irq driver"; break;
 case K_OBJ_DRIVER_AUDIO_CODEC: ret = "audio_codec driver"; break;
 case K_OBJ_DRIVER_DMIC: ret = "dmic driver"; break;
 case K_OBJ_DRIVER_CRYPTO: ret = "crypto driver"; break;
-case K_OBJ_DRIVER_ADC: ret = "adc driver"; break;
 case K_OBJ_DRIVER_AUXDISPLAY: ret = "auxdisplay driver"; break;
 case K_OBJ_DRIVER_BBRAM: ret = "bbram driver"; break;
 case K_OBJ_DRIVER_BIOMETRIC: ret = "biometric driver"; break;
@@ -73,7 +74,6 @@ case K_OBJ_DRIVER_COMPARATOR: ret = "comparator driver"; break;
 case K_OBJ_DRIVER_COREDUMP: ret = "coredump driver"; break;
 case K_OBJ_DRIVER_COUNTER: ret = "counter driver"; break;
 case K_OBJ_DRIVER_CRC: ret = "crc driver"; break;
-case K_OBJ_DRIVER_DAC: ret = "dac driver"; break;
 case K_OBJ_DRIVER_DAI: ret = "dai driver"; break;
 case K_OBJ_DRIVER_DALI: ret = "dali driver"; break;
 case K_OBJ_DRIVER_DISPLAY: ret = "display driver"; break;

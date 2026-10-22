@@ -1,5 +1,9 @@
 SECTION_PROLOGUE(device_api_area,,SUBALIGN(4))
 {
+	Z_LINK_ITERABLE(adc_driver_api);
+	PLACE_SYMBOL_HERE(_adc_driver_api_ext_end);
+	Z_LINK_ITERABLE(dac_driver_api);
+	PLACE_SYMBOL_HERE(_dac_driver_api_ext_end);
 	Z_LINK_ITERABLE(eeprom_driver_api);
 	PLACE_SYMBOL_HERE(_eeprom_driver_api_ext_end);
 	Z_LINK_ITERABLE(flash_driver_api);
@@ -28,8 +32,6 @@ SECTION_PROLOGUE(device_api_area,,SUBALIGN(4))
 	PLACE_SYMBOL_HERE(_dmic_driver_api_ext_end);
 	Z_LINK_ITERABLE(crypto_driver_api);
 	PLACE_SYMBOL_HERE(_crypto_driver_api_ext_end);
-	Z_LINK_ITERABLE(adc_driver_api);
-	PLACE_SYMBOL_HERE(_adc_driver_api_ext_end);
 	Z_LINK_ITERABLE(auxdisplay_driver_api);
 	PLACE_SYMBOL_HERE(_auxdisplay_driver_api_ext_end);
 	Z_LINK_ITERABLE(bbram_driver_api);
@@ -60,8 +62,6 @@ SECTION_PROLOGUE(device_api_area,,SUBALIGN(4))
 	PLACE_SYMBOL_HERE(_counter_driver_api_ext_end);
 	Z_LINK_ITERABLE(crc_driver_api);
 	PLACE_SYMBOL_HERE(_crc_driver_api_ext_end);
-	Z_LINK_ITERABLE(dac_driver_api);
-	PLACE_SYMBOL_HERE(_dac_driver_api_ext_end);
 	Z_LINK_ITERABLE(dai_driver_api);
 	PLACE_SYMBOL_HERE(_dai_driver_api_ext_end);
 	Z_LINK_ITERABLE(dali_driver_api);

@@ -7,6 +7,12 @@
  */
 
 /* Symbol declarations */
+extern void * const z_impl_adc_channel_setup;
+extern void * const z_impl_adc_get_decoder;
+extern void * const z_impl_adc_read;
+extern void * const z_impl_adc_read_async;
+extern void * const z_impl_dac_channel_setup;
+extern void * const z_impl_dac_write_value;
 extern void * const z_impl_device_deinit;
 extern void * const z_impl_device_get_binding;
 extern void * const z_impl_device_get_by_dt_nodelabel;
@@ -225,6 +231,12 @@ extern void * const z_impl_zvfs_poll;
 extern void * const z_impl_zvfs_select;
 
 /* Exported symbols */
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_adc_channel_setup);
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_adc_get_decoder);
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_adc_read);
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_adc_read_async);
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_dac_channel_setup);
+EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_dac_write_value);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_device_deinit);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_device_get_binding);
 EXPORT_GROUP_SYMBOL(SYSCALL, z_impl_device_get_by_dt_nodelabel);

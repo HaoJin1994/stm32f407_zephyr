@@ -323,7 +323,7 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 // listed, e.g. CONF_FILE="prj1.conf;prj2.conf" The CACHED_CONF_FILE
 // is internal Zephyr variable used between CMake runs. To change
 // CONF_FILE, use the CONF_FILE variable.
-CONF_FILE:STRING=prj.conf;modules/led/led.conf;modules/cdc_acm/cdc_acm.conf;modules/pwm/pwm.conf;modules/spi_flash/spi_flash.conf;modules/eeprom/eeprom.conf
+CONF_FILE:STRING=prj.conf;modules/led/led.conf;modules/cdc_acm/cdc_acm.conf;modules/pwm/pwm.conf;modules/spi_flash/spi_flash.conf;modules/eeprom/eeprom.conf;modules/adc/adc.conf;modules/dac/dac.conf
 
 //Path to a program.
 DTC:FILEPATH=/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/dtc
@@ -333,7 +333,7 @@ DTC:FILEPATH=/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64
 // parameter. These settings will override the settings in the
 // board's .dts file. Multiple files may be listed, e.g. DTC_OVERLAY_FILE="dts1.overlay
 // dts2.overlay"
-DTC_OVERLAY_FILE:STRING=modules/led/led.overlay;modules/cdc_acm/cdc_acm.overlay;modules/pwm/pwm.overlay;modules/spi_flash/spi_flash.overlay;modules/eeprom/eeprom.overlay
+DTC_OVERLAY_FILE:STRING=;modules/led/led.overlay;modules/cdc_acm/cdc_acm.overlay;modules/pwm/pwm.overlay;modules/spi_flash/spi_flash.overlay;modules/eeprom/eeprom.overlay;modules/adc/adc.overlay;modules/dac/dac.overlay
 
 //Path to a program.
 GEN_KOBJECT_LIST:FILEPATH=/home/ubuntu/work/zephyr/zephyr/scripts/build/gen_kobject_list.py
@@ -566,7 +566,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=131
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=133
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

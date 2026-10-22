@@ -18,6 +18,8 @@ cmake:
      - 'modules/pwm/pwm.overlay'
      - 'modules/spi_flash/spi_flash.overlay'
      - 'modules/eeprom/eeprom.overlay'
+     - 'modules/adc/adc.overlay'
+     - 'modules/dac/dac.overlay'
     include-dirs:
      - '/home/ubuntu/work/zephyr/modules/hal/ambiq/dts'
      - '/home/ubuntu/work/zephyr/modules/hal/atmel/include'
@@ -51,6 +53,8 @@ cmake:
      - 'modules/pwm/pwm.overlay'
      - 'modules/spi_flash/spi_flash.overlay'
      - 'modules/eeprom/eeprom.overlay'
+     - 'modules/adc/adc.overlay'
+     - 'modules/dac/dac.overlay'
   kconfig:
     files:
      - '/home/ubuntu/work/stm32f407_zephyr/boards/st/stm32_f407/stm32f407_defconfig'
@@ -60,6 +64,8 @@ cmake:
      - '/home/ubuntu/work/stm32f407_zephyr/hello_world/modules/pwm/pwm.conf'
      - '/home/ubuntu/work/stm32f407_zephyr/hello_world/modules/spi_flash/spi_flash.conf'
      - '/home/ubuntu/work/stm32f407_zephyr/hello_world/modules/eeprom/eeprom.conf'
+     - '/home/ubuntu/work/stm32f407_zephyr/hello_world/modules/adc/adc.conf'
+     - '/home/ubuntu/work/stm32f407_zephyr/hello_world/modules/dac/dac.conf'
     user-files:
      - 'prj.conf'
      - 'modules/led/led.conf'
@@ -67,6 +73,8 @@ cmake:
      - 'modules/pwm/pwm.conf'
      - 'modules/spi_flash/spi_flash.conf'
      - 'modules/eeprom/eeprom.conf'
+     - 'modules/adc/adc.conf'
+     - 'modules/dac/dac.conf'
   toolchain:
     name: 'zephyr'
     path: '/home/ubuntu/work/zephyr/zephyr-sdk-1.0.1'
@@ -75,6 +83,6 @@ cmake:
     zephyr-base: '/home/ubuntu/work/zephyr/zephyr'
 version: '0.1.0'
 west:
-  command: '/home/ubuntu/work/zephyr/zephyr/.venv/bin/west build -b stm32f407 -p always -- -DBOARD_ROOT=/home/ubuntu/work/stm32f407_zephyr -DDTC_OVERLAY_FILE=modules/led/led.overlay;modules/cdc_acm/cdc_acm.overlay;modules/pwm/pwm.overlay;modules/spi_flash/spi_flash.overlay;modules/eeprom/eeprom.overlay -DCONF_FILE=prj.conf;modules/led/led.conf;modules/cdc_acm/cdc_acm.conf;modules/pwm/pwm.conf;modules/spi_flash/spi_flash.conf;modules/eeprom/eeprom.conf'
+  command: '/home/ubuntu/work/zephyr/zephyr/.venv/bin/west build -b stm32f407 -p always -- -DBOARD_ROOT=/home/ubuntu/work/stm32f407_zephyr -DDTC_OVERLAY_FILE=;modules/led/led.overlay;modules/cdc_acm/cdc_acm.overlay;modules/pwm/pwm.overlay;modules/spi_flash/spi_flash.overlay;modules/eeprom/eeprom.overlay;modules/adc/adc.overlay;modules/dac/dac.overlay -DCONF_FILE=prj.conf;modules/led/led.conf;modules/cdc_acm/cdc_acm.conf;modules/pwm/pwm.conf;modules/spi_flash/spi_flash.conf;modules/eeprom/eeprom.conf;modules/adc/adc.conf;modules/dac/dac.conf'
   topdir: '/home/ubuntu/work/zephyr'
   version: '1.5.0'

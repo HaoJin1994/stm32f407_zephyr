@@ -28,7 +28,15 @@ CONFIGS="${CONFIGS};modules/spi_flash/spi_flash.conf"
 OVERLAYS="${OVERLAYS};modules/eeprom/eeprom.overlay"
 CONFIGS="${CONFIGS};modules/eeprom/eeprom.conf"
 
-OVERLAYS=${OVERLAYS#;}
+# adc 模块
+OVERLAYS="${OVERLAYS};modules/adc/adc.overlay"
+CONFIGS="${CONFIGS};modules/adc/adc.conf"
+
+#dac 模块
+OVERLAYS="${OVERLAYS};modules/dac/dac.overlay"
+CONFIGS="${CONFIGS};modules/dac/dac.conf"
+
+#OVERLAYS=${OVERLAYS#;}
 
 echo "=== Build Configuration ==="
 echo "Overlays: ${OVERLAYS}"

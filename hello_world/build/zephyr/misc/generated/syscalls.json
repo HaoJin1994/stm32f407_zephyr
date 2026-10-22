@@ -161,6 +161,54 @@
     ],
     [
         [
+            "int adc_channel_setup",
+            "const struct device *dev, const struct adc_channel_cfg *channel_cfg"
+        ],
+        "adc.h",
+        true
+    ],
+    [
+        [
+            "int adc_read",
+            "const struct device *dev, const struct adc_sequence *sequence"
+        ],
+        "adc.h",
+        true
+    ],
+    [
+        [
+            "int adc_read_async",
+            "const struct device *dev, const struct adc_sequence *sequence, struct k_poll_signal *async"
+        ],
+        "adc.h",
+        true
+    ],
+    [
+        [
+            "int adc_get_decoder",
+            "const struct device *dev, const struct adc_decoder_api **api"
+        ],
+        "adc.h",
+        true
+    ],
+    [
+        [
+            "int dac_channel_setup",
+            "const struct device *dev, const struct dac_channel_cfg *channel_cfg"
+        ],
+        "dac.h",
+        true
+    ],
+    [
+        [
+            "int dac_write_value",
+            "const struct device *dev, uint8_t channel, uint32_t value"
+        ],
+        "dac.h",
+        true
+    ],
+    [
+        [
             "int eeprom_read",
             "const struct device *dev, off_t offset, void *data, size_t len"
         ],
@@ -1769,38 +1817,6 @@
     ],
     [
         [
-            "int adc_channel_setup",
-            "const struct device *dev, const struct adc_channel_cfg *channel_cfg"
-        ],
-        "adc.h",
-        false
-    ],
-    [
-        [
-            "int adc_read",
-            "const struct device *dev, const struct adc_sequence *sequence"
-        ],
-        "adc.h",
-        false
-    ],
-    [
-        [
-            "int adc_read_async",
-            "const struct device *dev, const struct adc_sequence *sequence, struct k_poll_signal *async"
-        ],
-        "adc.h",
-        false
-    ],
-    [
-        [
-            "int adc_get_decoder",
-            "const struct device *dev, const struct adc_decoder_api **api"
-        ],
-        "adc.h",
-        false
-    ],
-    [
-        [
             "int auxdisplay_display_on",
             "const struct device *dev"
         ],
@@ -2789,22 +2805,6 @@
             "const struct device *dev, struct crc_ctx *ctx"
         ],
         "crc.h",
-        false
-    ],
-    [
-        [
-            "int dac_channel_setup",
-            "const struct device *dev, const struct dac_channel_cfg *channel_cfg"
-        ],
-        "dac.h",
-        false
-    ],
-    [
-        [
-            "int dac_write_value",
-            "const struct device *dev, uint8_t channel, uint32_t value"
-        ],
-        "dac.h",
         false
     ],
     [

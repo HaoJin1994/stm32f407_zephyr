@@ -55,6 +55,25 @@
     ]
   ],
   [
+    "CONFIG_MODULE_ADC",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_MODULE_DAC",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/stm32f407_zephyr/hello_world/modules/dac/dac.conf",
+      3
+    ]
+  ],
+  [
     "CONFIG_DT_HAS_ARM_ARMV7M_SYSTICK_ENABLED",
     "n",
     "bool",
@@ -242,6 +261,17 @@
     ]
   ],
   [
+    "CONFIG_DT_HAS_ST_STM32_ADC_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/stm32f407_zephyr/hello_world/build/Kconfig/Kconfig.dts",
+      14728
+    ]
+  ],
+  [
     "CONFIG_DT_HAS_ST_STM32_BBRAM_ENABLED",
     "n",
     "bool",
@@ -261,6 +291,17 @@
     [
       "/home/ubuntu/work/stm32f407_zephyr/hello_world/build/Kconfig/Kconfig.dts",
       14763
+    ]
+  ],
+  [
+    "CONFIG_DT_HAS_ST_STM32_DAC_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/stm32f407_zephyr/hello_world/build/Kconfig/Kconfig.dts",
+      14798
     ]
   ],
   [
@@ -495,6 +536,17 @@
     ]
   ],
   [
+    "CONFIG_DT_HAS_ST_STM32F4_ADC_ENABLED",
+    "n",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/stm32f407_zephyr/hello_world/build/Kconfig/Kconfig.dts",
+      15348
+    ]
+  ],
+  [
     "CONFIG_DT_HAS_ST_STM32F4_FLASH_CONTROLLER_ENABLED",
     "n",
     "bool",
@@ -608,6 +660,17 @@
     null,
     "unset",
     null
+  ],
+  [
+    "CONFIG_ADC_INIT_PRIORITY",
+    "y",
+    "int",
+    "50",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/drivers/adc/Kconfig",
+      72
+    ]
   ],
   [
     "CONFIG_MAIN_STACK_SIZE",
@@ -4194,6 +4257,143 @@
     "CONFIG_ADC",
     "y",
     "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/stm32f407_zephyr/hello_world/modules/adc/adc.conf",
+      1
+    ]
+  ],
+  [
+    "CONFIG_ADC_SHELL",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/stm32f407_zephyr/hello_world/modules/adc/adc.conf",
+      2
+    ]
+  ],
+  [
+    "CONFIG_ADC_HAS_SEQUENCE_PRIORITY",
+    "n",
+    "bool",
+    "y",
+    "select",
+    [
+      "ADC_STM32 && DT_HAS_ST_STM32_ADC_ENABLED && ADC"
+    ]
+  ],
+  [
+    "CONFIG_ADC_SEQUENCE_PRIORITY",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ADC_ASYNC",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ADC_STREAM",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ADC_DEFAULT_RTIO",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ADC_LOG_LEVEL_OFF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ADC_LOG_LEVEL_ERR",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ADC_LOG_LEVEL_WRN",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ADC_LOG_LEVEL_INF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ADC_LOG_LEVEL_DBG",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_ADC_LOG_LEVEL_DEFAULT",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/logging/Kconfig.template.log_config",
+      5
+    ]
+  ],
+  [
+    "CONFIG_ADC_LOG_LEVEL",
+    "n",
+    "int",
+    "3",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/logging/Kconfig.template.log_config",
+      36
+    ]
+  ],
+  [
+    "CONFIG_ADC_STM32",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/drivers/adc/Kconfig.stm32",
+      15
+    ]
+  ],
+  [
+    "CONFIG_ADC_STM32_DMA",
+    "y",
+    "bool",
     null,
     "unset",
     null
@@ -4570,9 +4770,107 @@
     "CONFIG_DAC",
     "y",
     "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/stm32f407_zephyr/hello_world/modules/dac/dac.conf",
+      1
+    ]
+  ],
+  [
+    "CONFIG_DAC_LOG_LEVEL_OFF",
+    "y",
+    "bool",
     null,
     "unset",
     null
+  ],
+  [
+    "CONFIG_DAC_LOG_LEVEL_ERR",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_DAC_LOG_LEVEL_WRN",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_DAC_LOG_LEVEL_INF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_DAC_LOG_LEVEL_DBG",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_DAC_LOG_LEVEL_DEFAULT",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/logging/Kconfig.template.log_config",
+      5
+    ]
+  ],
+  [
+    "CONFIG_DAC_LOG_LEVEL",
+    "n",
+    "int",
+    "3",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/subsys/logging/Kconfig.template.log_config",
+      36
+    ]
+  ],
+  [
+    "CONFIG_DAC_SHELL",
+    "y",
+    "bool",
+    "y",
+    "assign",
+    [
+      "/home/ubuntu/work/stm32f407_zephyr/hello_world/modules/dac/dac.conf",
+      2
+    ]
+  ],
+  [
+    "CONFIG_DAC_INIT_PRIORITY",
+    "y",
+    "int",
+    "50",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/drivers/dac/Kconfig",
+      28
+    ]
+  ],
+  [
+    "CONFIG_DAC_STM32",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/ubuntu/work/zephyr/zephyr/drivers/dac/Kconfig.stm32",
+      9
+    ]
   ],
   [
     "CONFIG_DAI",
@@ -5844,6 +6142,8 @@
     "y",
     "select",
     [
+      "ADC_STM32 && DT_HAS_ST_STM32_ADC_ENABLED && ADC",
+      "DAC_STM32 && DT_HAS_ST_STM32_DAC_ENABLED && DAC",
       "I2C_STM32 && (DT_HAS_ST_STM32_I2C_V1_ENABLED || DT_HAS_ST_STM32_I2C_V2_ENABLED) && I2C",
       "PWM_STM32 && DT_HAS_ST_STM32_PWM_ENABLED && PWM",
       "UART_STM32 && DT_HAS_ST_STM32_UART_ENABLED && SERIAL",

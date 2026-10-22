@@ -3396,7 +3396,6 @@
             reg = <0x00000000 ((128) * 1024)>;
             read-only;
         };
-
         slot0_partition: partition@20000 {
             label = "image-0";
             reg = <0x00020000 ((384) * 1024)>;
@@ -3411,6 +3410,45 @@
             label = "storage";
             reg = <0x000E0000 ((128) * 1024)>;
         };
+    };
+};
+
+&spi1 {
+    status = "okay";
+    pinctrl-0 = <&spi1_sck_pb3 &spi1_miso_pb4 &spi1_mosi_pb5>;
+    pinctrl-names = "default";
+    cs-gpios = <&gpiob 14 (1 << 0)>;
+
+    w25q128: w25q128@0 {
+        compatible = "jedec,spi-nor";
+        status = "okay";
+        reg = <0>;
+        spi-max-frequency = <30000000>;
+        size = <0x1000000>;
+        jedec-id = [52 21 18];
+    };
+};
+
+
+&w25q128 {
+    partitions {
+        compatible = "fixed-partitions";
+        #address-cells = <1>;
+        #size-cells = <1>;
+        data_partition: partition@0 {
+            label = "data";
+            reg = <0x0 ((1024) * 1024)>;
+        };
+        littlefs_partition: partition@100000 {
+            label = "littlefs";
+            reg = <0x100000 ((1024) * 1024)>;
+        };
+        fatfs_partition: partition@200000 {
+            label = "rootfs";
+            reg = <0x200000 ((1024) * 1024)>;
+        };
+
+
     };
 };
 # 0 "<command-line>" 2
@@ -3535,6 +3573,49 @@ zephyr_udc0: &usbotg_fs {
         address-width = <8>;
         timeout = <100>;
     };
+};
+# 0 "<command-line>" 2
+# 1 "./modules/adc/adc.overlay" 1
+
+/ {
+ zephyr,user {
+  io-channels = <&adc1 5>;
+ };
+};
+
+&adc1 {
+    #address-cells = <1>;
+ #size-cells = <0>;
+    pinctrl-0 = <&adc1_in5_pa5>;
+    pinctrl-names = "default";
+    status = "okay";
+    st,adc-prescaler = <4>;
+
+ channel@5 {
+
+        reg = <5>;
+  zephyr,gain = "ADC_GAIN_1";
+  zephyr,reference = "ADC_REF_INTERNAL";
+  zephyr,acquisition-time = <0>;
+  zephyr,resolution = <8>;
+ };
+};
+# 0 "<command-line>" 2
+# 1 "./modules/dac/dac.overlay" 1
+
+/ {
+ zephyr,user {
+  dac = <&dac1>;
+  dac-channel-id = <1>;
+  dac-resolution = <8>;
+ };
+
+};
+
+&dac1 {
+ status = "okay";
+    pinctrl-0 = <&dac_out1_pa4>;
+    pinctrl-names = "default";
 };
 # 0 "<command-line>" 2
 # 1 "/home/ubuntu/work/zephyr/zephyr/misc/empty_file.c"
